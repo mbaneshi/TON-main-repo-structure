@@ -1,0 +1,536 @@
+.
+├── CMakeLists.txt
+├── Ed25519.cpp
+├── Ed25519.h
+├── block
+│   ├── Binlog.cpp
+│   ├── Binlog.h
+│   ├── adjust-block.cpp
+│   ├── block-binlog.h
+│   ├── block-db-impl.h
+│   ├── block-db.cpp
+│   ├── block-db.h
+│   ├── block-parse.cpp
+│   ├── block-parse.h
+│   ├── block.cpp
+│   ├── block.h
+│   ├── block.tlb
+│   ├── check-proof.cpp
+│   ├── check-proof.h
+│   ├── create-state.cpp
+│   ├── dump-block.cpp
+│   ├── mc-config.cpp
+│   ├── mc-config.h
+│   ├── output-queue-merger.cpp
+│   ├── output-queue-merger.h
+│   ├── test-block.cpp
+│   ├── test-weight-distr.cpp
+│   ├── transaction.cpp
+│   └── transaction.h
+├── common
+│   ├── AtomicRef.h
+│   ├── bigexp.cpp
+│   ├── bigexp.h
+│   ├── bigint.cpp
+│   ├── bigint.hpp
+│   ├── bitstring.cpp
+│   ├── bitstring.h
+│   ├── linalloc.hpp
+│   ├── promiseop.hpp
+│   ├── refcnt.cpp
+│   ├── refcnt.hpp
+│   ├── refint.cpp
+│   ├── refint.h
+│   ├── util.cpp
+│   └── util.h
+├── ellcurve
+│   ├── Ed25519.cpp
+│   ├── Ed25519.h
+│   ├── Fp25519.cpp
+│   ├── Fp25519.h
+│   ├── Montgomery.cpp
+│   ├── Montgomery.h
+│   ├── TwEdwards.cpp
+│   └── TwEdwards.h
+├── fift
+│   ├── Continuation.cpp
+│   ├── Continuation.h
+│   ├── Dictionary.cpp
+│   ├── Dictionary.h
+│   ├── Fift.cpp
+│   ├── Fift.h
+│   ├── HashMap.cpp
+│   ├── HashMap.h
+│   ├── IntCtx.cpp
+│   ├── IntCtx.h
+│   ├── SourceLookup.cpp
+│   ├── SourceLookup.h
+│   ├── fift-main.cpp
+│   ├── lib
+│   │   ├── Asm.fif
+│   │   ├── Color.fif
+│   │   ├── Disasm.fif
+│   │   ├── Fift.fif
+│   │   ├── FiftExt.fif
+│   │   ├── GetOpt.fif
+│   │   ├── Lisp.fif
+│   │   ├── Lists.fif
+│   │   ├── Stack.fif
+│   │   └── TonUtil.fif
+│   ├── utils.cpp
+│   ├── utils.h
+│   ├── words.cpp
+│   └── words.h
+├── func
+│   ├── abscode.cpp
+│   ├── analyzer.cpp
+│   ├── asmops.cpp
+│   ├── auto-tests
+│   │   ├── legacy_tester.js
+│   │   ├── legacy_tester.py
+│   │   ├── legacy_tests
+│   │   │   ├── bsc-bridge-collector
+│   │   │   │   ├── bridge-config.fc
+│   │   │   │   ├── message_utils.fc
+│   │   │   │   ├── stdlib.fc
+│   │   │   │   └── votes-collector.fc
+│   │   │   ├── config
+│   │   │   │   ├── config-code.fc
+│   │   │   │   └── stdlib.fc
+│   │   │   ├── dns-collection
+│   │   │   │   ├── dns-utils.fc
+│   │   │   │   ├── nft-collection.fc
+│   │   │   │   ├── params.fc
+│   │   │   │   └── stdlib.fc
+│   │   │   ├── elector
+│   │   │   │   ├── elector-code.fc
+│   │   │   │   └── stdlib.fc
+│   │   │   ├── eth-bridge-multisig
+│   │   │   │   ├── multisig-code.fc
+│   │   │   │   └── stdlib.fc
+│   │   │   ├── gg-marketplace
+│   │   │   │   ├── nft-marketplace-v2.fc
+│   │   │   │   └── stdlib.fc
+│   │   │   ├── jetton-minter
+│   │   │   │   ├── imports
+│   │   │   │   │   ├── constants.fc
+│   │   │   │   │   ├── jetton-utils.fc
+│   │   │   │   │   ├── op-codes.fc
+│   │   │   │   │   ├── params.fc
+│   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   └── utils.fc
+│   │   │   │   └── jetton-minter.fc
+│   │   │   ├── jetton-wallet
+│   │   │   │   ├── imports
+│   │   │   │   │   ├── constants.fc
+│   │   │   │   │   ├── jetton-utils.fc
+│   │   │   │   │   ├── op-codes.fc
+│   │   │   │   │   ├── params.fc
+│   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   └── utils.fc
+│   │   │   │   └── jetton-wallet.fc
+│   │   │   ├── nft-collection
+│   │   │   │   ├── nft-collection-editable.fc
+│   │   │   │   ├── op-codes.fc
+│   │   │   │   ├── params.fc
+│   │   │   │   └── stdlib.fc
+│   │   │   ├── nominator-pool
+│   │   │   │   ├── pool.fc
+│   │   │   │   └── stdlib.fc
+│   │   │   ├── storage
+│   │   │   │   ├── constants.fc
+│   │   │   │   ├── stdlib.fc
+│   │   │   │   ├── storage-contract.fc
+│   │   │   │   └── storage-provider.fc
+│   │   │   ├── tact-examples
+│   │   │   │   ├── jetton_JettonDefaultWallet.code.fc
+│   │   │   │   ├── jetton_SampleJetton.code.fc
+│   │   │   │   ├── maps_MapTestContract.code.fc
+│   │   │   │   ├── stdlib.fc
+│   │   │   │   └── treasure_Treasure.code.fc
+│   │   │   ├── tele-nft-item
+│   │   │   │   ├── common.fc
+│   │   │   │   ├── nft-item.fc
+│   │   │   │   └── stdlib.fc
+│   │   │   ├── uni-lock-wallet
+│   │   │   │   ├── stdlib.fc
+│   │   │   │   └── uni-lockup-wallet.fc
+│   │   │   ├── wallet-v4
+│   │   │   │   ├── stdlib.fc
+│   │   │   │   └── wallet-v4-code.fc
+│   │   │   └── whales-nominators
+│   │   │       ├── LICENSE
+│   │   │       ├── modules
+│   │   │       │   ├── constants.fc
+│   │   │       │   ├── get.fc
+│   │   │       │   ├── model.fc
+│   │   │       │   ├── op-common.fc
+│   │   │       │   ├── op-controller.fc
+│   │   │       │   ├── op-nominators.fc
+│   │   │       │   ├── op-owner.fc
+│   │   │       │   ├── store-base.fc
+│   │   │       │   ├── store-nominators.fc
+│   │   │       │   ├── store-validator.fc
+│   │   │       │   ├── utils-config-mock.fc
+│   │   │       │   ├── utils-config.fc
+│   │   │       │   └── utils.fc
+│   │   │       ├── nominators.fc
+│   │   │       ├── proxy.fc
+│   │   │       └── stdlib.fc
+│   │   ├── legacy_tests.json
+│   │   ├── run_tests.js
+│   │   ├── run_tests.py
+│   │   ├── stress_tester.py
+│   │   ├── tests
+│   │   │   ├── a10.fc
+│   │   │   ├── a6.fc
+│   │   │   ├── a6_1.fc
+│   │   │   ├── a6_5.fc
+│   │   │   ├── a7.fc
+│   │   │   ├── allow_post_modification.fc
+│   │   │   ├── asm_arg_order.fc
+│   │   │   ├── c2.fc
+│   │   │   ├── c2_1.fc
+│   │   │   ├── co1.fc
+│   │   │   ├── code_after_ifelse.fc
+│   │   │   ├── inline_big.fc
+│   │   │   ├── inline_if.fc
+│   │   │   ├── inline_loops.fc
+│   │   │   ├── method_id.fc
+│   │   │   ├── s1.fc
+│   │   │   ├── test-math.fc
+│   │   │   ├── try-func.fc
+│   │   │   ├── unbalanced_ret.fc
+│   │   │   ├── unbalanced_ret_inline.fc
+│   │   │   ├── unbalanced_ret_loops.fc
+│   │   │   ├── unbalanced_ret_nested.fc
+│   │   │   ├── w1.fc
+│   │   │   ├── w2.fc
+│   │   │   ├── w6.fc
+│   │   │   ├── w7.fc
+│   │   │   └── w9.fc
+│   │   └── wasm_tests_common.js
+│   ├── builtins.cpp
+│   ├── codegen.cpp
+│   ├── func-main.cpp
+│   ├── func.cpp
+│   ├── func.h
+│   ├── gen-abscode.cpp
+│   ├── keywords.cpp
+│   ├── optimize.cpp
+│   ├── parse-func.cpp
+│   ├── stack-transform.cpp
+│   ├── test
+│   │   ├── a10.fc
+│   │   ├── a11.fc
+│   │   ├── a12.fc
+│   │   ├── a12_1.fc
+│   │   ├── a12_2.fc
+│   │   ├── a12_3.fc
+│   │   ├── a12_4.fc
+│   │   ├── a12_5.fc
+│   │   ├── a12_6.fc
+│   │   ├── a12_7.fc
+│   │   ├── a12_8.fc
+│   │   ├── a12_9.fc
+│   │   ├── a6.fc
+│   │   ├── a6.fp
+│   │   ├── a6_1.fc
+│   │   ├── a6_2.fc
+│   │   ├── a6_3.fc
+│   │   ├── a6_4.fc
+│   │   ├── a6_5.fc
+│   │   ├── a7.fc
+│   │   ├── a8.fc
+│   │   ├── a9.fc
+│   │   ├── a9_1.fc
+│   │   ├── b1.fc
+│   │   ├── b2.fc
+│   │   ├── b2_0.fc
+│   │   ├── b2_1.fc
+│   │   ├── b2_2.fc
+│   │   ├── b3.fc
+│   │   ├── c1.fc
+│   │   ├── c2.fc
+│   │   ├── c2_1.fc
+│   │   ├── co1.fc
+│   │   ├── co2.fc
+│   │   ├── co3.fc
+│   │   ├── i1.fc
+│   │   ├── i1sub1.fc
+│   │   ├── i1sub2.fc
+│   │   ├── pv.fc
+│   │   ├── s1.fc
+│   │   ├── s2.fc
+│   │   ├── tc1.fc
+│   │   ├── tc2.fc
+│   │   ├── w1.fc
+│   │   ├── w2.fc
+│   │   ├── w3.fc
+│   │   ├── w4.fc
+│   │   ├── w5.fc
+│   │   ├── w6.fc
+│   │   ├── w7.fc
+│   │   ├── w8.fc
+│   │   └── w9.fc
+│   └── unify-types.cpp
+├── funcfiftlib
+│   └── funcfiftlib.cpp
+├── openssl
+│   ├── bignum.cpp
+│   ├── bignum.h
+│   ├── digest.h
+│   ├── digest.hpp
+│   ├── rand.cpp
+│   ├── rand.hpp
+│   ├── residue.cpp
+│   └── residue.h
+├── parser
+│   ├── lexer.cpp
+│   ├── lexer.h
+│   ├── srcread.cpp
+│   ├── srcread.h
+│   ├── symtable.cpp
+│   └── symtable.h
+├── smartcont
+│   ├── CreateState.fif
+│   ├── LICENSE.LGPL
+│   ├── asm-to-cpp.fif
+│   ├── auto-dns.fif
+│   ├── complaint-vote-req.fif
+│   ├── complaint-vote-signed.fif
+│   ├── config-code.fc
+│   ├── config-proposal-vote-req.fif
+│   ├── config-proposal-vote-signed.fif
+│   ├── create-config-proposal.fif
+│   ├── create-config-upgrade-proposal.fif
+│   ├── create-elector-upgrade-proposal.fif
+│   ├── dns-auto-code.fc
+│   ├── dns-manual-code.fc
+│   ├── elector-code.fc
+│   ├── envelope-complaint.fif
+│   ├── gen-zerostate-test.fif
+│   ├── gen-zerostate.fif
+│   ├── highload-wallet-code.fc
+│   ├── highload-wallet-v2-code.fc
+│   ├── highload-wallet-v2-one.fif
+│   ├── highload-wallet-v2.fif
+│   ├── highload-wallet.fif
+│   ├── manual-dns-manage.fif
+│   ├── mathlib.fc
+│   ├── multisig-code.fc
+│   ├── new-auto-dns.fif
+│   ├── new-highload-wallet-v2.fif
+│   ├── new-highload-wallet.fif
+│   ├── new-manual-dns.fif
+│   ├── new-pinger.fif
+│   ├── new-pow-testgiver.fif
+│   ├── new-restricted-wallet.fif
+│   ├── new-restricted-wallet2.fif
+│   ├── new-restricted-wallet3.fif
+│   ├── new-testgiver.fif
+│   ├── new-wallet-v2.fif
+│   ├── new-wallet-v3.fif
+│   ├── new-wallet.fif
+│   ├── payment-channel-code.fc
+│   ├── pow-testgiver-code.fc
+│   ├── recover-stake.fif
+│   ├── restricted-wallet-code.fc
+│   ├── restricted-wallet2-code.fc
+│   ├── restricted-wallet3-code.fc
+│   ├── show-addr.fif
+│   ├── simple-wallet-code.fc
+│   ├── simple-wallet-ext-code.fc
+│   ├── stdlib.fc
+│   ├── testgiver.fif
+│   ├── update-config-smc.fif
+│   ├── update-config.fif
+│   ├── update-elector-smc.fif
+│   ├── validator-elect-req.fif
+│   ├── validator-elect-signed.fif
+│   ├── wallet-code.fc
+│   ├── wallet-v2.fif
+│   ├── wallet-v3-code.fif
+│   ├── wallet-v3.fif
+│   ├── wallet.fif
+│   └── wallet3-code.fc
+├── smc-envelope
+│   ├── GenericAccount.cpp
+│   ├── GenericAccount.h
+│   ├── HighloadWallet.cpp
+│   ├── HighloadWallet.h
+│   ├── HighloadWalletV2.cpp
+│   ├── HighloadWalletV2.h
+│   ├── ManualDns.cpp
+│   ├── ManualDns.h
+│   ├── MultisigWallet.cpp
+│   ├── MultisigWallet.h
+│   ├── PaymentChannel.cpp
+│   ├── PaymentChannel.h
+│   ├── SmartContract.cpp
+│   ├── SmartContract.h
+│   ├── SmartContractCode.cpp
+│   ├── SmartContractCode.h
+│   ├── TestGiver.cpp
+│   ├── TestGiver.h
+│   ├── TestWallet.cpp
+│   ├── TestWallet.h
+│   ├── Wallet.cpp
+│   ├── Wallet.h
+│   ├── WalletInterface.cpp
+│   ├── WalletInterface.h
+│   ├── WalletV3.cpp
+│   └── WalletV3.h
+├── test
+│   ├── Ed25519.cpp
+│   ├── fift
+│   │   ├── asm-nested-program.fif
+│   │   ├── bug.fif
+│   │   ├── bug_div.fif
+│   │   ├── bug_ufits.fif
+│   │   ├── cmdline.fif
+│   │   ├── contfrac.fif
+│   │   ├── disasm.fif
+│   │   ├── fift-ext.fif
+│   │   ├── fixed.fif
+│   │   ├── hmap.fif
+│   │   ├── namespaces.fif
+│   │   ├── sort.fif
+│   │   ├── sort2.fif
+│   │   ├── test-stack-copy.fif
+│   │   ├── test.fif
+│   │   ├── testcc.fif
+│   │   ├── testdb.fif
+│   │   ├── testdict.fif
+│   │   ├── testdict2.fif
+│   │   ├── testvm.fif
+│   │   ├── testvm2.fif
+│   │   ├── testvm3.fif
+│   │   ├── testvm4.fif
+│   │   ├── testvm4a.fif
+│   │   ├── testvm4b.fif
+│   │   ├── testvm4c.fif
+│   │   ├── testvm4d.fif
+│   │   ├── testvm4e.fif
+│   │   ├── testvm5.fif
+│   │   ├── testvm6.fif
+│   │   ├── testvm7.fif
+│   │   ├── testvm8.fif
+│   │   ├── testvm9.fif
+│   │   └── testvmprog.fif
+│   ├── fift.cpp
+│   ├── modbigint.cpp
+│   ├── test-bigint.cpp
+│   ├── test-cells.cpp
+│   ├── test-db.cpp
+│   ├── test-ed25519-crypto.cpp
+│   ├── test-smartcont.cpp
+│   ├── vm.cpp
+│   └── wycheproof.h
+├── tl
+│   ├── boc.tlb
+│   ├── hashmap.tlb
+│   ├── tlbc-aux.h
+│   ├── tlbc-data.h
+│   ├── tlbc-gen-cpp.cpp
+│   ├── tlbc-gen-cpp.h
+│   ├── tlbc.cpp
+│   ├── tlblib.cpp
+│   └── tlblib.hpp
+├── tree.txt
+├── util
+│   ├── Miner.cpp
+│   ├── Miner.h
+│   └── pow-miner.cpp
+└── vm
+    ├── arithops.cpp
+    ├── arithops.h
+    ├── atom.cpp
+    ├── atom.h
+    ├── boc-writers.h
+    ├── boc.cpp
+    ├── boc.h
+    ├── box.hpp
+    ├── cellops.cpp
+    ├── cellops.h
+    ├── cellparse.hpp
+    ├── cells
+    │   ├── Cell.cpp
+    │   ├── Cell.h
+    │   ├── CellBuilder.cpp
+    │   ├── CellBuilder.h
+    │   ├── CellHash.cpp
+    │   ├── CellHash.h
+    │   ├── CellSlice.cpp
+    │   ├── CellSlice.h
+    │   ├── CellString.cpp
+    │   ├── CellString.h
+    │   ├── CellTraits.cpp
+    │   ├── CellTraits.h
+    │   ├── CellUsageTree.cpp
+    │   ├── CellUsageTree.h
+    │   ├── CellWithStorage.h
+    │   ├── DataCell.cpp
+    │   ├── DataCell.h
+    │   ├── ExtCell.h
+    │   ├── LevelMask.cpp
+    │   ├── LevelMask.h
+    │   ├── MerkleProof.cpp
+    │   ├── MerkleProof.h
+    │   ├── MerkleUpdate.cpp
+    │   ├── MerkleUpdate.h
+    │   ├── PrunnedCell.h
+    │   ├── UsageCell.h
+    │   ├── VirtualCell.h
+    │   └── VirtualizationParameters.h
+    ├── cells.h
+    ├── cellslice.h
+    ├── continuation.cpp
+    ├── continuation.h
+    ├── contops.cpp
+    ├── contops.h
+    ├── cp0.cpp
+    ├── cp0.h
+    ├── db
+    │   ├── BlobView.cpp
+    │   ├── BlobView.h
+    │   ├── CellHashTable.h
+    │   ├── CellStorage.cpp
+    │   ├── CellStorage.h
+    │   ├── DynamicBagOfCellsDb.cpp
+    │   ├── DynamicBagOfCellsDb.h
+    │   ├── StaticBagOfCellsDb.cpp
+    │   ├── StaticBagOfCellsDb.h
+    │   ├── TonDb.cpp
+    │   └── TonDb.h
+    ├── debugops.cpp
+    ├── debugops.h
+    ├── dict.cpp
+    ├── dict.h
+    ├── dictops.cpp
+    ├── dictops.h
+    ├── dispatch.cpp
+    ├── dispatch.h
+    ├── excno.hpp
+    ├── fmt.hpp
+    ├── large-boc-serializer.cpp
+    ├── log.h
+    ├── memo.cpp
+    ├── memo.h
+    ├── opctable.cpp
+    ├── opctable.h
+    ├── stack.cpp
+    ├── stack.hpp
+    ├── stackops.cpp
+    ├── stackops.h
+    ├── tonops.cpp
+    ├── tonops.h
+    ├── tupleops.cpp
+    ├── tupleops.h
+    ├── utils.cpp
+    ├── utils.h
+    ├── vm.cpp
+    ├── vm.h
+    └── vmstate.h
+
+42 directories, 492 files
