@@ -1,2 +1,2 @@
-# TON-main-repo-structure
-TON mainr epo directory structure
+# TON main repo directory structure
+TON main repo directory structure
