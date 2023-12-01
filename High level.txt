@@ -1,0 +1,2787 @@
+.
+├── ton
+│   ├── CMake
+│   │   ├── AddCXXCompilerFlag.cmake
+│   │   ├── FindJeMalloc.cmake
+│   │   ├── FindMHD.cmake
+│   │   ├── FindReadline.cmake
+│   │   └── UseLATEX.cmake
+│   ├── CMakeLists.txt
+│   ├── Changelog.md
+│   ├── GPLv2
+│   ├── LGPLv2
+│   ├── LICENSE.LGPL
+│   ├── README.md
+│   ├── adnl
+│   │   ├── CMakeLists.txt
+│   │   ├── adnl-address-list.cpp
+│   │   ├── adnl-address-list.h
+│   │   ├── adnl-address-list.hpp
+│   │   ├── adnl-channel.cpp
+│   │   ├── adnl-channel.h
+│   │   ├── adnl-channel.hpp
+│   │   ├── adnl-db.cpp
+│   │   ├── adnl-db.h
+│   │   ├── adnl-db.hpp
+│   │   ├── adnl-ext-client.cpp
+│   │   ├── adnl-ext-client.h
+│   │   ├── adnl-ext-client.hpp
+│   │   ├── adnl-ext-connection.cpp
+│   │   ├── adnl-ext-connection.hpp
+│   │   ├── adnl-ext-server.cpp
+│   │   ├── adnl-ext-server.h
+│   │   ├── adnl-ext-server.hpp
+│   │   ├── adnl-local-id.cpp
+│   │   ├── adnl-local-id.h
+│   │   ├── adnl-message.cpp
+│   │   ├── adnl-message.h
+│   │   ├── adnl-network-manager.cpp
+│   │   ├── adnl-network-manager.h
+│   │   ├── adnl-network-manager.hpp
+│   │   ├── adnl-node-id.cpp
+│   │   ├── adnl-node-id.hpp
+│   │   ├── adnl-node.cpp
+│   │   ├── adnl-node.h
+│   │   ├── adnl-packet.cpp
+│   │   ├── adnl-packet.h
+│   │   ├── adnl-peer-table.cpp
+│   │   ├── adnl-peer-table.h
+│   │   ├── adnl-peer-table.hpp
+│   │   ├── adnl-peer.cpp
+│   │   ├── adnl-peer.h
+│   │   ├── adnl-peer.hpp
+│   │   ├── adnl-pong.cpp
+│   │   ├── adnl-proxy-types.cpp
+│   │   ├── adnl-proxy-types.h
+│   │   ├── adnl-proxy-types.hpp
+│   │   ├── adnl-proxy.cpp
+│   │   ├── adnl-query.cpp
+│   │   ├── adnl-query.h
+│   │   ├── adnl-received-mask.h
+│   │   ├── adnl-static-nodes.cpp
+│   │   ├── adnl-static-nodes.h
+│   │   ├── adnl-static-nodes.hpp
+│   │   ├── adnl-test-loopback-implementation.cpp
+│   │   ├── adnl-test-loopback-implementation.h
+│   │   ├── adnl-tunnel.cpp
+│   │   ├── adnl-tunnel.h
+│   │   ├── adnl.h
+│   │   ├── test
+│   │   │   └── adnl-test-ping.cpp
+│   │   ├── utils.cpp
+│   │   └── utils.hpp
+│   ├── blockchain-explorer
+│   │   ├── CMakeLists.txt
+│   │   ├── blockchain-explorer-http.cpp
+│   │   ├── blockchain-explorer-http.hpp
+│   │   ├── blockchain-explorer-query.cpp
+│   │   ├── blockchain-explorer-query.hpp
+│   │   ├── blockchain-explorer.cpp
+│   │   └── blockchain-explorer.hpp
+│   ├── catchain
+│   │   ├── CMakeLists.txt
+│   │   ├── catchain-block.cpp
+│   │   ├── catchain-block.hpp
+│   │   ├── catchain-received-block.cpp
+│   │   ├── catchain-received-block.h
+│   │   ├── catchain-received-block.hpp
+│   │   ├── catchain-receiver-interface.h
+│   │   ├── catchain-receiver-source.cpp
+│   │   ├── catchain-receiver-source.h
+│   │   ├── catchain-receiver-source.hpp
+│   │   ├── catchain-receiver.cpp
+│   │   ├── catchain-receiver.h
+│   │   ├── catchain-receiver.hpp
+│   │   ├── catchain-types.h
+│   │   ├── catchain.cpp
+│   │   ├── catchain.h
+│   │   └── catchain.hpp
+│   ├── common
+│   │   ├── CMakeLists.txt
+│   │   ├── checksum.h
+│   │   ├── delay.h
+│   │   ├── errorcode.h
+│   │   ├── errorlog.cpp
+│   │   ├── errorlog.h
+│   │   ├── int-to-string.hpp
+│   │   ├── io.hpp
+│   │   └── status.h
+│   ├── create-hardfork
+│   │   ├── CMakeLists.txt
+│   │   └── create-hardfork.cpp
+│   ├── crypto
+│   │   ├── CMakeLists.txt
+│   │   ├── Ed25519.cpp
+│   │   ├── Ed25519.h
+│   │   ├── block
+│   │   │   ├── Binlog.cpp
+│   │   │   ├── Binlog.h
+│   │   │   ├── adjust-block.cpp
+│   │   │   ├── block-binlog.h
+│   │   │   ├── block-db-impl.h
+│   │   │   ├── block-db.cpp
+│   │   │   ├── block-db.h
+│   │   │   ├── block-parse.cpp
+│   │   │   ├── block-parse.h
+│   │   │   ├── block.cpp
+│   │   │   ├── block.h
+│   │   │   ├── block.tlb
+│   │   │   ├── check-proof.cpp
+│   │   │   ├── check-proof.h
+│   │   │   ├── create-state.cpp
+│   │   │   ├── dump-block.cpp
+│   │   │   ├── mc-config.cpp
+│   │   │   ├── mc-config.h
+│   │   │   ├── output-queue-merger.cpp
+│   │   │   ├── output-queue-merger.h
+│   │   │   ├── test-block.cpp
+│   │   │   ├── test-weight-distr.cpp
+│   │   │   ├── transaction.cpp
+│   │   │   └── transaction.h
+│   │   ├── common
+│   │   │   ├── AtomicRef.h
+│   │   │   ├── bigexp.cpp
+│   │   │   ├── bigexp.h
+│   │   │   ├── bigint.cpp
+│   │   │   ├── bigint.hpp
+│   │   │   ├── bitstring.cpp
+│   │   │   ├── bitstring.h
+│   │   │   ├── linalloc.hpp
+│   │   │   ├── promiseop.hpp
+│   │   │   ├── refcnt.cpp
+│   │   │   ├── refcnt.hpp
+│   │   │   ├── refint.cpp
+│   │   │   ├── refint.h
+│   │   │   ├── util.cpp
+│   │   │   └── util.h
+│   │   ├── ellcurve
+│   │   │   ├── Ed25519.cpp
+│   │   │   ├── Ed25519.h
+│   │   │   ├── Fp25519.cpp
+│   │   │   ├── Fp25519.h
+│   │   │   ├── Montgomery.cpp
+│   │   │   ├── Montgomery.h
+│   │   │   ├── TwEdwards.cpp
+│   │   │   └── TwEdwards.h
+│   │   ├── fift
+│   │   │   ├── Continuation.cpp
+│   │   │   ├── Continuation.h
+│   │   │   ├── Dictionary.cpp
+│   │   │   ├── Dictionary.h
+│   │   │   ├── Fift.cpp
+│   │   │   ├── Fift.h
+│   │   │   ├── HashMap.cpp
+│   │   │   ├── HashMap.h
+│   │   │   ├── IntCtx.cpp
+│   │   │   ├── IntCtx.h
+│   │   │   ├── SourceLookup.cpp
+│   │   │   ├── SourceLookup.h
+│   │   │   ├── fift-main.cpp
+│   │   │   ├── lib
+│   │   │   │   ├── Asm.fif
+│   │   │   │   ├── Color.fif
+│   │   │   │   ├── Disasm.fif
+│   │   │   │   ├── Fift.fif
+│   │   │   │   ├── FiftExt.fif
+│   │   │   │   ├── GetOpt.fif
+│   │   │   │   ├── Lisp.fif
+│   │   │   │   ├── Lists.fif
+│   │   │   │   ├── Stack.fif
+│   │   │   │   └── TonUtil.fif
+│   │   │   ├── utils.cpp
+│   │   │   ├── utils.h
+│   │   │   ├── words.cpp
+│   │   │   └── words.h
+│   │   ├── func
+│   │   │   ├── abscode.cpp
+│   │   │   ├── analyzer.cpp
+│   │   │   ├── asmops.cpp
+│   │   │   ├── auto-tests
+│   │   │   │   ├── legacy_tester.js
+│   │   │   │   ├── legacy_tester.py
+│   │   │   │   ├── legacy_tests
+│   │   │   │   │   ├── bsc-bridge-collector
+│   │   │   │   │   │   ├── bridge-config.fc
+│   │   │   │   │   │   ├── message_utils.fc
+│   │   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   │   └── votes-collector.fc
+│   │   │   │   │   ├── config
+│   │   │   │   │   │   ├── config-code.fc
+│   │   │   │   │   │   └── stdlib.fc
+│   │   │   │   │   ├── dns-collection
+│   │   │   │   │   │   ├── dns-utils.fc
+│   │   │   │   │   │   ├── nft-collection.fc
+│   │   │   │   │   │   ├── params.fc
+│   │   │   │   │   │   └── stdlib.fc
+│   │   │   │   │   ├── elector
+│   │   │   │   │   │   ├── elector-code.fc
+│   │   │   │   │   │   └── stdlib.fc
+│   │   │   │   │   ├── eth-bridge-multisig
+│   │   │   │   │   │   ├── multisig-code.fc
+│   │   │   │   │   │   └── stdlib.fc
+│   │   │   │   │   ├── gg-marketplace
+│   │   │   │   │   │   ├── nft-marketplace-v2.fc
+│   │   │   │   │   │   └── stdlib.fc
+│   │   │   │   │   ├── jetton-minter
+│   │   │   │   │   │   ├── imports
+│   │   │   │   │   │   │   ├── constants.fc
+│   │   │   │   │   │   │   ├── jetton-utils.fc
+│   │   │   │   │   │   │   ├── op-codes.fc
+│   │   │   │   │   │   │   ├── params.fc
+│   │   │   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   │   │   └── utils.fc
+│   │   │   │   │   │   └── jetton-minter.fc
+│   │   │   │   │   ├── jetton-wallet
+│   │   │   │   │   │   ├── imports
+│   │   │   │   │   │   │   ├── constants.fc
+│   │   │   │   │   │   │   ├── jetton-utils.fc
+│   │   │   │   │   │   │   ├── op-codes.fc
+│   │   │   │   │   │   │   ├── params.fc
+│   │   │   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   │   │   └── utils.fc
+│   │   │   │   │   │   └── jetton-wallet.fc
+│   │   │   │   │   ├── nft-collection
+│   │   │   │   │   │   ├── nft-collection-editable.fc
+│   │   │   │   │   │   ├── op-codes.fc
+│   │   │   │   │   │   ├── params.fc
+│   │   │   │   │   │   └── stdlib.fc
+│   │   │   │   │   ├── nominator-pool
+│   │   │   │   │   │   ├── pool.fc
+│   │   │   │   │   │   └── stdlib.fc
+│   │   │   │   │   ├── storage
+│   │   │   │   │   │   ├── constants.fc
+│   │   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   │   ├── storage-contract.fc
+│   │   │   │   │   │   └── storage-provider.fc
+│   │   │   │   │   ├── tact-examples
+│   │   │   │   │   │   ├── jetton_JettonDefaultWallet.code.fc
+│   │   │   │   │   │   ├── jetton_SampleJetton.code.fc
+│   │   │   │   │   │   ├── maps_MapTestContract.code.fc
+│   │   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   │   └── treasure_Treasure.code.fc
+│   │   │   │   │   ├── tele-nft-item
+│   │   │   │   │   │   ├── common.fc
+│   │   │   │   │   │   ├── nft-item.fc
+│   │   │   │   │   │   └── stdlib.fc
+│   │   │   │   │   ├── uni-lock-wallet
+│   │   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   │   └── uni-lockup-wallet.fc
+│   │   │   │   │   ├── wallet-v4
+│   │   │   │   │   │   ├── stdlib.fc
+│   │   │   │   │   │   └── wallet-v4-code.fc
+│   │   │   │   │   └── whales-nominators
+│   │   │   │   │       ├── LICENSE
+│   │   │   │   │       ├── modules
+│   │   │   │   │       │   ├── constants.fc
+│   │   │   │   │       │   ├── get.fc
+│   │   │   │   │       │   ├── model.fc
+│   │   │   │   │       │   ├── op-common.fc
+│   │   │   │   │       │   ├── op-controller.fc
+│   │   │   │   │       │   ├── op-nominators.fc
+│   │   │   │   │       │   ├── op-owner.fc
+│   │   │   │   │       │   ├── store-base.fc
+│   │   │   │   │       │   ├── store-nominators.fc
+│   │   │   │   │       │   ├── store-validator.fc
+│   │   │   │   │       │   ├── utils-config-mock.fc
+│   │   │   │   │       │   ├── utils-config.fc
+│   │   │   │   │       │   └── utils.fc
+│   │   │   │   │       ├── nominators.fc
+│   │   │   │   │       ├── proxy.fc
+│   │   │   │   │       └── stdlib.fc
+│   │   │   │   ├── legacy_tests.json
+│   │   │   │   ├── run_tests.js
+│   │   │   │   ├── run_tests.py
+│   │   │   │   ├── stress_tester.py
+│   │   │   │   ├── tests
+│   │   │   │   │   ├── a10.fc
+│   │   │   │   │   ├── a6.fc
+│   │   │   │   │   ├── a6_1.fc
+│   │   │   │   │   ├── a6_5.fc
+│   │   │   │   │   ├── a7.fc
+│   │   │   │   │   ├── allow_post_modification.fc
+│   │   │   │   │   ├── asm_arg_order.fc
+│   │   │   │   │   ├── c2.fc
+│   │   │   │   │   ├── c2_1.fc
+│   │   │   │   │   ├── co1.fc
+│   │   │   │   │   ├── code_after_ifelse.fc
+│   │   │   │   │   ├── inline_big.fc
+│   │   │   │   │   ├── inline_if.fc
+│   │   │   │   │   ├── inline_loops.fc
+│   │   │   │   │   ├── method_id.fc
+│   │   │   │   │   ├── s1.fc
+│   │   │   │   │   ├── test-math.fc
+│   │   │   │   │   ├── try-func.fc
+│   │   │   │   │   ├── unbalanced_ret.fc
+│   │   │   │   │   ├── unbalanced_ret_inline.fc
+│   │   │   │   │   ├── unbalanced_ret_loops.fc
+│   │   │   │   │   ├── unbalanced_ret_nested.fc
+│   │   │   │   │   ├── w1.fc
+│   │   │   │   │   ├── w2.fc
+│   │   │   │   │   ├── w6.fc
+│   │   │   │   │   ├── w7.fc
+│   │   │   │   │   └── w9.fc
+│   │   │   │   └── wasm_tests_common.js
+│   │   │   ├── builtins.cpp
+│   │   │   ├── codegen.cpp
+│   │   │   ├── func-main.cpp
+│   │   │   ├── func.cpp
+│   │   │   ├── func.h
+│   │   │   ├── gen-abscode.cpp
+│   │   │   ├── keywords.cpp
+│   │   │   ├── optimize.cpp
+│   │   │   ├── parse-func.cpp
+│   │   │   ├── stack-transform.cpp
+│   │   │   ├── test
+│   │   │   │   ├── a10.fc
+│   │   │   │   ├── a11.fc
+│   │   │   │   ├── a12.fc
+│   │   │   │   ├── a12_1.fc
+│   │   │   │   ├── a12_2.fc
+│   │   │   │   ├── a12_3.fc
+│   │   │   │   ├── a12_4.fc
+│   │   │   │   ├── a12_5.fc
+│   │   │   │   ├── a12_6.fc
+│   │   │   │   ├── a12_7.fc
+│   │   │   │   ├── a12_8.fc
+│   │   │   │   ├── a12_9.fc
+│   │   │   │   ├── a6.fc
+│   │   │   │   ├── a6.fp
+│   │   │   │   ├── a6_1.fc
+│   │   │   │   ├── a6_2.fc
+│   │   │   │   ├── a6_3.fc
+│   │   │   │   ├── a6_4.fc
+│   │   │   │   ├── a6_5.fc
+│   │   │   │   ├── a7.fc
+│   │   │   │   ├── a8.fc
+│   │   │   │   ├── a9.fc
+│   │   │   │   ├── a9_1.fc
+│   │   │   │   ├── b1.fc
+│   │   │   │   ├── b2.fc
+│   │   │   │   ├── b2_0.fc
+│   │   │   │   ├── b2_1.fc
+│   │   │   │   ├── b2_2.fc
+│   │   │   │   ├── b3.fc
+│   │   │   │   ├── c1.fc
+│   │   │   │   ├── c2.fc
+│   │   │   │   ├── c2_1.fc
+│   │   │   │   ├── co1.fc
+│   │   │   │   ├── co2.fc
+│   │   │   │   ├── co3.fc
+│   │   │   │   ├── i1.fc
+│   │   │   │   ├── i1sub1.fc
+│   │   │   │   ├── i1sub2.fc
+│   │   │   │   ├── pv.fc
+│   │   │   │   ├── s1.fc
+│   │   │   │   ├── s2.fc
+│   │   │   │   ├── tc1.fc
+│   │   │   │   ├── tc2.fc
+│   │   │   │   ├── w1.fc
+│   │   │   │   ├── w2.fc
+│   │   │   │   ├── w3.fc
+│   │   │   │   ├── w4.fc
+│   │   │   │   ├── w5.fc
+│   │   │   │   ├── w6.fc
+│   │   │   │   ├── w7.fc
+│   │   │   │   ├── w8.fc
+│   │   │   │   └── w9.fc
+│   │   │   └── unify-types.cpp
+│   │   ├── funcfiftlib
+│   │   │   └── funcfiftlib.cpp
+│   │   ├── openssl
+│   │   │   ├── bignum.cpp
+│   │   │   ├── bignum.h
+│   │   │   ├── digest.h
+│   │   │   ├── digest.hpp
+│   │   │   ├── rand.cpp
+│   │   │   ├── rand.hpp
+│   │   │   ├── residue.cpp
+│   │   │   └── residue.h
+│   │   ├── parser
+│   │   │   ├── lexer.cpp
+│   │   │   ├── lexer.h
+│   │   │   ├── srcread.cpp
+│   │   │   ├── srcread.h
+│   │   │   ├── symtable.cpp
+│   │   │   └── symtable.h
+│   │   ├── smartcont
+│   │   │   ├── CreateState.fif
+│   │   │   ├── LICENSE.LGPL
+│   │   │   ├── asm-to-cpp.fif
+│   │   │   ├── auto-dns.fif
+│   │   │   ├── complaint-vote-req.fif
+│   │   │   ├── complaint-vote-signed.fif
+│   │   │   ├── config-code.fc
+│   │   │   ├── config-proposal-vote-req.fif
+│   │   │   ├── config-proposal-vote-signed.fif
+│   │   │   ├── create-config-proposal.fif
+│   │   │   ├── create-config-upgrade-proposal.fif
+│   │   │   ├── create-elector-upgrade-proposal.fif
+│   │   │   ├── dns-auto-code.fc
+│   │   │   ├── dns-manual-code.fc
+│   │   │   ├── elector-code.fc
+│   │   │   ├── envelope-complaint.fif
+│   │   │   ├── gen-zerostate-test.fif
+│   │   │   ├── gen-zerostate.fif
+│   │   │   ├── highload-wallet-code.fc
+│   │   │   ├── highload-wallet-v2-code.fc
+│   │   │   ├── highload-wallet-v2-one.fif
+│   │   │   ├── highload-wallet-v2.fif
+│   │   │   ├── highload-wallet.fif
+│   │   │   ├── manual-dns-manage.fif
+│   │   │   ├── mathlib.fc
+│   │   │   ├── multisig-code.fc
+│   │   │   ├── new-auto-dns.fif
+│   │   │   ├── new-highload-wallet-v2.fif
+│   │   │   ├── new-highload-wallet.fif
+│   │   │   ├── new-manual-dns.fif
+│   │   │   ├── new-pinger.fif
+│   │   │   ├── new-pow-testgiver.fif
+│   │   │   ├── new-restricted-wallet.fif
+│   │   │   ├── new-restricted-wallet2.fif
+│   │   │   ├── new-restricted-wallet3.fif
+│   │   │   ├── new-testgiver.fif
+│   │   │   ├── new-wallet-v2.fif
+│   │   │   ├── new-wallet-v3.fif
+│   │   │   ├── new-wallet.fif
+│   │   │   ├── payment-channel-code.fc
+│   │   │   ├── pow-testgiver-code.fc
+│   │   │   ├── recover-stake.fif
+│   │   │   ├── restricted-wallet-code.fc
+│   │   │   ├── restricted-wallet2-code.fc
+│   │   │   ├── restricted-wallet3-code.fc
+│   │   │   ├── show-addr.fif
+│   │   │   ├── simple-wallet-code.fc
+│   │   │   ├── simple-wallet-ext-code.fc
+│   │   │   ├── stdlib.fc
+│   │   │   ├── testgiver.fif
+│   │   │   ├── update-config-smc.fif
+│   │   │   ├── update-config.fif
+│   │   │   ├── update-elector-smc.fif
+│   │   │   ├── validator-elect-req.fif
+│   │   │   ├── validator-elect-signed.fif
+│   │   │   ├── wallet-code.fc
+│   │   │   ├── wallet-v2.fif
+│   │   │   ├── wallet-v3-code.fif
+│   │   │   ├── wallet-v3.fif
+│   │   │   ├── wallet.fif
+│   │   │   └── wallet3-code.fc
+│   │   ├── smc-envelope
+│   │   │   ├── GenericAccount.cpp
+│   │   │   ├── GenericAccount.h
+│   │   │   ├── HighloadWallet.cpp
+│   │   │   ├── HighloadWallet.h
+│   │   │   ├── HighloadWalletV2.cpp
+│   │   │   ├── HighloadWalletV2.h
+│   │   │   ├── ManualDns.cpp
+│   │   │   ├── ManualDns.h
+│   │   │   ├── MultisigWallet.cpp
+│   │   │   ├── MultisigWallet.h
+│   │   │   ├── PaymentChannel.cpp
+│   │   │   ├── PaymentChannel.h
+│   │   │   ├── SmartContract.cpp
+│   │   │   ├── SmartContract.h
+│   │   │   ├── SmartContractCode.cpp
+│   │   │   ├── SmartContractCode.h
+│   │   │   ├── TestGiver.cpp
+│   │   │   ├── TestGiver.h
+│   │   │   ├── TestWallet.cpp
+│   │   │   ├── TestWallet.h
+│   │   │   ├── Wallet.cpp
+│   │   │   ├── Wallet.h
+│   │   │   ├── WalletInterface.cpp
+│   │   │   ├── WalletInterface.h
+│   │   │   ├── WalletV3.cpp
+│   │   │   └── WalletV3.h
+│   │   ├── test
+│   │   │   ├── Ed25519.cpp
+│   │   │   ├── fift
+│   │   │   │   ├── asm-nested-program.fif
+│   │   │   │   ├── bug.fif
+│   │   │   │   ├── bug_div.fif
+│   │   │   │   ├── bug_ufits.fif
+│   │   │   │   ├── cmdline.fif
+│   │   │   │   ├── contfrac.fif
+│   │   │   │   ├── disasm.fif
+│   │   │   │   ├── fift-ext.fif
+│   │   │   │   ├── fixed.fif
+│   │   │   │   ├── hmap.fif
+│   │   │   │   ├── namespaces.fif
+│   │   │   │   ├── sort.fif
+│   │   │   │   ├── sort2.fif
+│   │   │   │   ├── test-stack-copy.fif
+│   │   │   │   ├── test.fif
+│   │   │   │   ├── testcc.fif
+│   │   │   │   ├── testdb.fif
+│   │   │   │   ├── testdict.fif
+│   │   │   │   ├── testdict2.fif
+│   │   │   │   ├── testvm.fif
+│   │   │   │   ├── testvm2.fif
+│   │   │   │   ├── testvm3.fif
+│   │   │   │   ├── testvm4.fif
+│   │   │   │   ├── testvm4a.fif
+│   │   │   │   ├── testvm4b.fif
+│   │   │   │   ├── testvm4c.fif
+│   │   │   │   ├── testvm4d.fif
+│   │   │   │   ├── testvm4e.fif
+│   │   │   │   ├── testvm5.fif
+│   │   │   │   ├── testvm6.fif
+│   │   │   │   ├── testvm7.fif
+│   │   │   │   ├── testvm8.fif
+│   │   │   │   ├── testvm9.fif
+│   │   │   │   └── testvmprog.fif
+│   │   │   ├── fift.cpp
+│   │   │   ├── modbigint.cpp
+│   │   │   ├── test-bigint.cpp
+│   │   │   ├── test-cells.cpp
+│   │   │   ├── test-db.cpp
+│   │   │   ├── test-ed25519-crypto.cpp
+│   │   │   ├── test-smartcont.cpp
+│   │   │   ├── vm.cpp
+│   │   │   └── wycheproof.h
+│   │   ├── tl
+│   │   │   ├── boc.tlb
+│   │   │   ├── hashmap.tlb
+│   │   │   ├── tlbc-aux.h
+│   │   │   ├── tlbc-data.h
+│   │   │   ├── tlbc-gen-cpp.cpp
+│   │   │   ├── tlbc-gen-cpp.h
+│   │   │   ├── tlbc.cpp
+│   │   │   ├── tlblib.cpp
+│   │   │   └── tlblib.hpp
+│   │   ├── util
+│   │   │   ├── Miner.cpp
+│   │   │   ├── Miner.h
+│   │   │   └── pow-miner.cpp
+│   │   └── vm
+│   │       ├── arithops.cpp
+│   │       ├── arithops.h
+│   │       ├── atom.cpp
+│   │       ├── atom.h
+│   │       ├── boc-writers.h
+│   │       ├── boc.cpp
+│   │       ├── boc.h
+│   │       ├── box.hpp
+│   │       ├── cellops.cpp
+│   │       ├── cellops.h
+│   │       ├── cellparse.hpp
+│   │       ├── cells
+│   │       │   ├── Cell.cpp
+│   │       │   ├── Cell.h
+│   │       │   ├── CellBuilder.cpp
+│   │       │   ├── CellBuilder.h
+│   │       │   ├── CellHash.cpp
+│   │       │   ├── CellHash.h
+│   │       │   ├── CellSlice.cpp
+│   │       │   ├── CellSlice.h
+│   │       │   ├── CellString.cpp
+│   │       │   ├── CellString.h
+│   │       │   ├── CellTraits.cpp
+│   │       │   ├── CellTraits.h
+│   │       │   ├── CellUsageTree.cpp
+│   │       │   ├── CellUsageTree.h
+│   │       │   ├── CellWithStorage.h
+│   │       │   ├── DataCell.cpp
+│   │       │   ├── DataCell.h
+│   │       │   ├── ExtCell.h
+│   │       │   ├── LevelMask.cpp
+│   │       │   ├── LevelMask.h
+│   │       │   ├── MerkleProof.cpp
+│   │       │   ├── MerkleProof.h
+│   │       │   ├── MerkleUpdate.cpp
+│   │       │   ├── MerkleUpdate.h
+│   │       │   ├── PrunnedCell.h
+│   │       │   ├── UsageCell.h
+│   │       │   ├── VirtualCell.h
+│   │       │   └── VirtualizationParameters.h
+│   │       ├── cells.h
+│   │       ├── cellslice.h
+│   │       ├── continuation.cpp
+│   │       ├── continuation.h
+│   │       ├── contops.cpp
+│   │       ├── contops.h
+│   │       ├── cp0.cpp
+│   │       ├── cp0.h
+│   │       ├── db
+│   │       │   ├── BlobView.cpp
+│   │       │   ├── BlobView.h
+│   │       │   ├── CellHashTable.h
+│   │       │   ├── CellStorage.cpp
+│   │       │   ├── CellStorage.h
+│   │       │   ├── DynamicBagOfCellsDb.cpp
+│   │       │   ├── DynamicBagOfCellsDb.h
+│   │       │   ├── StaticBagOfCellsDb.cpp
+│   │       │   ├── StaticBagOfCellsDb.h
+│   │       │   ├── TonDb.cpp
+│   │       │   └── TonDb.h
+│   │       ├── debugops.cpp
+│   │       ├── debugops.h
+│   │       ├── dict.cpp
+│   │       ├── dict.h
+│   │       ├── dictops.cpp
+│   │       ├── dictops.h
+│   │       ├── dispatch.cpp
+│   │       ├── dispatch.h
+│   │       ├── excno.hpp
+│   │       ├── fmt.hpp
+│   │       ├── large-boc-serializer.cpp
+│   │       ├── log.h
+│   │       ├── memo.cpp
+│   │       ├── memo.h
+│   │       ├── opctable.cpp
+│   │       ├── opctable.h
+│   │       ├── stack.cpp
+│   │       ├── stack.hpp
+│   │       ├── stackops.cpp
+│   │       ├── stackops.h
+│   │       ├── tonops.cpp
+│   │       ├── tonops.h
+│   │       ├── tupleops.cpp
+│   │       ├── tupleops.h
+│   │       ├── utils.cpp
+│   │       ├── utils.h
+│   │       ├── vm.cpp
+│   │       ├── vm.h
+│   │       └── vmstate.h
+│   ├── dht
+│   │   ├── CMakeLists.txt
+│   │   ├── dht-bucket.cpp
+│   │   ├── dht-bucket.hpp
+│   │   ├── dht-in.hpp
+│   │   ├── dht-node.cpp
+│   │   ├── dht-node.hpp
+│   │   ├── dht-query.cpp
+│   │   ├── dht-query.hpp
+│   │   ├── dht-remote-node.cpp
+│   │   ├── dht-remote-node.hpp
+│   │   ├── dht-types.cpp
+│   │   ├── dht-types.h
+│   │   ├── dht.cpp
+│   │   ├── dht.h
+│   │   ├── dht.hpp
+│   │   └── utils
+│   │       ├── dht-ping-servers.cpp
+│   │       └── dht-resolve.cpp
+│   ├── dht-server
+│   │   ├── CMakeLists.txt
+│   │   ├── dht-server.cpp
+│   │   └── dht-server.hpp
+│   ├── doc
+│   │   ├── ConfigParam-HOWTO
+│   │   ├── DNS-HOWTO
+│   │   ├── FullNode-HOWTO
+│   │   ├── LiteClient-HOWTO
+│   │   ├── TestGrams-HOWTO
+│   │   ├── TonSites-HOWTO
+│   │   ├── Validator-HOWTO
+│   │   ├── catchain-dos.md
+│   │   ├── catchain.tex
+│   │   ├── fiftbase.tex
+│   │   ├── smc-guidelines.txt
+│   │   ├── tblkch.tex
+│   │   ├── ton.tex
+│   │   └── tvm.tex
+│   ├── docker
+│   │   ├── Dockerfile
+│   │   ├── README.md
+│   │   ├── control.template
+│   │   └── init.sh
+│   ├── emulator
+│   │   ├── CMakeLists.txt
+│   │   ├── README.md
+│   │   ├── StringLog.h
+│   │   ├── emulator-emscripten.cpp
+│   │   ├── emulator-extern.cpp
+│   │   ├── emulator-extern.h
+│   │   ├── emulator_export_list
+│   │   ├── transaction-emulator.cpp
+│   │   ├── transaction-emulator.h
+│   │   └── tvm-emulator.hpp
+│   ├── example
+│   │   ├── android
+│   │   │   ├── AddIntDef.php
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── README.md
+│   │   │   ├── build-all.sh
+│   │   │   ├── build.sh
+│   │   │   ├── export.sh
+│   │   │   ├── native-lib.cpp
+│   │   │   ├── src
+│   │   │   │   └── drinkless
+│   │   │   │       └── org
+│   │   │   │           └── ton
+│   │   │   │               └── Client.java
+│   │   │   ├── test
+│   │   │   │   ├── build.gradle
+│   │   │   │   ├── gradle
+│   │   │   │   │   └── wrapper
+│   │   │   │   │       ├── gradle-wrapper.jar
+│   │   │   │   │       └── gradle-wrapper.properties
+│   │   │   │   ├── gradle.properties
+│   │   │   │   ├── gradlew
+│   │   │   │   ├── gradlew.bat
+│   │   │   │   ├── settings.gradle
+│   │   │   │   └── ton
+│   │   │   │       ├── build.gradle
+│   │   │   │       ├── proguard-rules.pro
+│   │   │   │       └── src
+│   │   │   │           ├── androidTest
+│   │   │   │           │   └── java
+│   │   │   │           │       └── drinkless
+│   │   │   │           │           └── org
+│   │   │   │           │               └── ton
+│   │   │   │           │                   ├── TonTest.kt
+│   │   │   │           │                   └── TonTestJava.java
+│   │   │   │           ├── main
+│   │   │   │           │   ├── AndroidManifest.xml
+│   │   │   │           │   ├── java
+│   │   │   │           │   │   └── drinkless
+│   │   │   │           │   │       └── org
+│   │   │   │           │   │           └── ton
+│   │   │   │           │   │               └── Client.java
+│   │   │   │           │   └── res
+│   │   │   │           │       └── values
+│   │   │   │           │           └── strings.xml
+│   │   │   │           └── test
+│   │   │   │               └── java
+│   │   │   │                   └── drinkless
+│   │   │   │                       └── org
+│   │   │   │                           └── ton
+│   │   │   │                               └── ExampleUnitTest.java
+│   │   │   ├── test.sh
+│   │   │   └── third_party
+│   │   │       └── crypto
+│   │   │           ├── arm
+│   │   │           │   ├── include
+│   │   │           │   │   ├── internal
+│   │   │           │   │   │   ├── __DECC_INCLUDE_EPILOGUE.H
+│   │   │           │   │   │   ├── __DECC_INCLUDE_PROLOGUE.H
+│   │   │           │   │   │   ├── bio.h
+│   │   │           │   │   │   ├── comp.h
+│   │   │           │   │   │   ├── conf.h
+│   │   │           │   │   │   ├── constant_time_locl.h
+│   │   │           │   │   │   ├── cryptlib.h
+│   │   │           │   │   │   ├── dane.h
+│   │   │           │   │   │   ├── dso.h
+│   │   │           │   │   │   ├── dsoerr.h
+│   │   │           │   │   │   ├── err.h
+│   │   │           │   │   │   ├── nelem.h
+│   │   │           │   │   │   ├── numbers.h
+│   │   │           │   │   │   ├── o_dir.h
+│   │   │           │   │   │   ├── o_str.h
+│   │   │           │   │   │   ├── refcount.h
+│   │   │           │   │   │   ├── sockets.h
+│   │   │           │   │   │   ├── sslconf.h
+│   │   │           │   │   │   ├── thread_once.h
+│   │   │           │   │   │   └── tsan_assist.h
+│   │   │           │   │   └── openssl
+│   │   │           │   │       ├── __DECC_INCLUDE_EPILOGUE.H
+│   │   │           │   │       ├── __DECC_INCLUDE_PROLOGUE.H
+│   │   │           │   │       ├── aes.h
+│   │   │           │   │       ├── asn1.h
+│   │   │           │   │       ├── asn1_mac.h
+│   │   │           │   │       ├── asn1err.h
+│   │   │           │   │       ├── asn1t.h
+│   │   │           │   │       ├── async.h
+│   │   │           │   │       ├── asyncerr.h
+│   │   │           │   │       ├── bio.h
+│   │   │           │   │       ├── bioerr.h
+│   │   │           │   │       ├── blowfish.h
+│   │   │           │   │       ├── bn.h
+│   │   │           │   │       ├── bnerr.h
+│   │   │           │   │       ├── buffer.h
+│   │   │           │   │       ├── buffererr.h
+│   │   │           │   │       ├── camellia.h
+│   │   │           │   │       ├── cast.h
+│   │   │           │   │       ├── cmac.h
+│   │   │           │   │       ├── cms.h
+│   │   │           │   │       ├── cmserr.h
+│   │   │           │   │       ├── comp.h
+│   │   │           │   │       ├── comperr.h
+│   │   │           │   │       ├── conf.h
+│   │   │           │   │       ├── conf_api.h
+│   │   │           │   │       ├── conferr.h
+│   │   │           │   │       ├── crypto.h
+│   │   │           │   │       ├── cryptoerr.h
+│   │   │           │   │       ├── ct.h
+│   │   │           │   │       ├── cterr.h
+│   │   │           │   │       ├── des.h
+│   │   │           │   │       ├── dh.h
+│   │   │           │   │       ├── dherr.h
+│   │   │           │   │       ├── dsa.h
+│   │   │           │   │       ├── dsaerr.h
+│   │   │           │   │       ├── dtls1.h
+│   │   │           │   │       ├── e_os2.h
+│   │   │           │   │       ├── ebcdic.h
+│   │   │           │   │       ├── ec.h
+│   │   │           │   │       ├── ecdh.h
+│   │   │           │   │       ├── ecdsa.h
+│   │   │           │   │       ├── ecerr.h
+│   │   │           │   │       ├── engine.h
+│   │   │           │   │       ├── engineerr.h
+│   │   │           │   │       ├── err.h
+│   │   │           │   │       ├── evp.h
+│   │   │           │   │       ├── evperr.h
+│   │   │           │   │       ├── hmac.h
+│   │   │           │   │       ├── idea.h
+│   │   │           │   │       ├── kdf.h
+│   │   │           │   │       ├── kdferr.h
+│   │   │           │   │       ├── lhash.h
+│   │   │           │   │       ├── md2.h
+│   │   │           │   │       ├── md4.h
+│   │   │           │   │       ├── md5.h
+│   │   │           │   │       ├── mdc2.h
+│   │   │           │   │       ├── modes.h
+│   │   │           │   │       ├── obj_mac.h
+│   │   │           │   │       ├── objects.h
+│   │   │           │   │       ├── objectserr.h
+│   │   │           │   │       ├── ocsp.h
+│   │   │           │   │       ├── ocsperr.h
+│   │   │           │   │       ├── opensslconf.h
+│   │   │           │   │       ├── opensslconf.h.in
+│   │   │           │   │       ├── opensslv.h
+│   │   │           │   │       ├── ossl_typ.h
+│   │   │           │   │       ├── pem.h
+│   │   │           │   │       ├── pem2.h
+│   │   │           │   │       ├── pemerr.h
+│   │   │           │   │       ├── pkcs12.h
+│   │   │           │   │       ├── pkcs12err.h
+│   │   │           │   │       ├── pkcs7.h
+│   │   │           │   │       ├── pkcs7err.h
+│   │   │           │   │       ├── rand.h
+│   │   │           │   │       ├── rand_drbg.h
+│   │   │           │   │       ├── randerr.h
+│   │   │           │   │       ├── rc2.h
+│   │   │           │   │       ├── rc4.h
+│   │   │           │   │       ├── rc5.h
+│   │   │           │   │       ├── ripemd.h
+│   │   │           │   │       ├── rsa.h
+│   │   │           │   │       ├── rsaerr.h
+│   │   │           │   │       ├── safestack.h
+│   │   │           │   │       ├── seed.h
+│   │   │           │   │       ├── sha.h
+│   │   │           │   │       ├── srp.h
+│   │   │           │   │       ├── srtp.h
+│   │   │           │   │       ├── ssl.h
+│   │   │           │   │       ├── ssl2.h
+│   │   │           │   │       ├── ssl3.h
+│   │   │           │   │       ├── sslerr.h
+│   │   │           │   │       ├── stack.h
+│   │   │           │   │       ├── store.h
+│   │   │           │   │       ├── storeerr.h
+│   │   │           │   │       ├── symhacks.h
+│   │   │           │   │       ├── tls1.h
+│   │   │           │   │       ├── ts.h
+│   │   │           │   │       ├── tserr.h
+│   │   │           │   │       ├── txt_db.h
+│   │   │           │   │       ├── ui.h
+│   │   │           │   │       ├── uierr.h
+│   │   │           │   │       ├── whrlpool.h
+│   │   │           │   │       ├── x509.h
+│   │   │           │   │       ├── x509_vfy.h
+│   │   │           │   │       ├── x509err.h
+│   │   │           │   │       ├── x509v3.h
+│   │   │           │   │       └── x509v3err.h
+│   │   │           │   └── lib
+│   │   │           │       ├── libcrypto.a
+│   │   │           │       └── libssl.a
+│   │   │           ├── arm64
+│   │   │           │   ├── include
+│   │   │           │   │   ├── internal
+│   │   │           │   │   │   ├── __DECC_INCLUDE_EPILOGUE.H
+│   │   │           │   │   │   ├── __DECC_INCLUDE_PROLOGUE.H
+│   │   │           │   │   │   ├── bio.h
+│   │   │           │   │   │   ├── comp.h
+│   │   │           │   │   │   ├── conf.h
+│   │   │           │   │   │   ├── constant_time_locl.h
+│   │   │           │   │   │   ├── cryptlib.h
+│   │   │           │   │   │   ├── dane.h
+│   │   │           │   │   │   ├── dso.h
+│   │   │           │   │   │   ├── dsoerr.h
+│   │   │           │   │   │   ├── err.h
+│   │   │           │   │   │   ├── nelem.h
+│   │   │           │   │   │   ├── numbers.h
+│   │   │           │   │   │   ├── o_dir.h
+│   │   │           │   │   │   ├── o_str.h
+│   │   │           │   │   │   ├── refcount.h
+│   │   │           │   │   │   ├── sockets.h
+│   │   │           │   │   │   ├── sslconf.h
+│   │   │           │   │   │   ├── thread_once.h
+│   │   │           │   │   │   └── tsan_assist.h
+│   │   │           │   │   └── openssl
+│   │   │           │   │       ├── __DECC_INCLUDE_EPILOGUE.H
+│   │   │           │   │       ├── __DECC_INCLUDE_PROLOGUE.H
+│   │   │           │   │       ├── aes.h
+│   │   │           │   │       ├── asn1.h
+│   │   │           │   │       ├── asn1_mac.h
+│   │   │           │   │       ├── asn1err.h
+│   │   │           │   │       ├── asn1t.h
+│   │   │           │   │       ├── async.h
+│   │   │           │   │       ├── asyncerr.h
+│   │   │           │   │       ├── bio.h
+│   │   │           │   │       ├── bioerr.h
+│   │   │           │   │       ├── blowfish.h
+│   │   │           │   │       ├── bn.h
+│   │   │           │   │       ├── bnerr.h
+│   │   │           │   │       ├── buffer.h
+│   │   │           │   │       ├── buffererr.h
+│   │   │           │   │       ├── camellia.h
+│   │   │           │   │       ├── cast.h
+│   │   │           │   │       ├── cmac.h
+│   │   │           │   │       ├── cms.h
+│   │   │           │   │       ├── cmserr.h
+│   │   │           │   │       ├── comp.h
+│   │   │           │   │       ├── comperr.h
+│   │   │           │   │       ├── conf.h
+│   │   │           │   │       ├── conf_api.h
+│   │   │           │   │       ├── conferr.h
+│   │   │           │   │       ├── crypto.h
+│   │   │           │   │       ├── cryptoerr.h
+│   │   │           │   │       ├── ct.h
+│   │   │           │   │       ├── cterr.h
+│   │   │           │   │       ├── des.h
+│   │   │           │   │       ├── dh.h
+│   │   │           │   │       ├── dherr.h
+│   │   │           │   │       ├── dsa.h
+│   │   │           │   │       ├── dsaerr.h
+│   │   │           │   │       ├── dtls1.h
+│   │   │           │   │       ├── e_os2.h
+│   │   │           │   │       ├── ebcdic.h
+│   │   │           │   │       ├── ec.h
+│   │   │           │   │       ├── ecdh.h
+│   │   │           │   │       ├── ecdsa.h
+│   │   │           │   │       ├── ecerr.h
+│   │   │           │   │       ├── engine.h
+│   │   │           │   │       ├── engineerr.h
+│   │   │           │   │       ├── err.h
+│   │   │           │   │       ├── evp.h
+│   │   │           │   │       ├── evperr.h
+│   │   │           │   │       ├── hmac.h
+│   │   │           │   │       ├── idea.h
+│   │   │           │   │       ├── kdf.h
+│   │   │           │   │       ├── kdferr.h
+│   │   │           │   │       ├── lhash.h
+│   │   │           │   │       ├── md2.h
+│   │   │           │   │       ├── md4.h
+│   │   │           │   │       ├── md5.h
+│   │   │           │   │       ├── mdc2.h
+│   │   │           │   │       ├── modes.h
+│   │   │           │   │       ├── obj_mac.h
+│   │   │           │   │       ├── objects.h
+│   │   │           │   │       ├── objectserr.h
+│   │   │           │   │       ├── ocsp.h
+│   │   │           │   │       ├── ocsperr.h
+│   │   │           │   │       ├── opensslconf.h
+│   │   │           │   │       ├── opensslconf.h.in
+│   │   │           │   │       ├── opensslv.h
+│   │   │           │   │       ├── ossl_typ.h
+│   │   │           │   │       ├── pem.h
+│   │   │           │   │       ├── pem2.h
+│   │   │           │   │       ├── pemerr.h
+│   │   │           │   │       ├── pkcs12.h
+│   │   │           │   │       ├── pkcs12err.h
+│   │   │           │   │       ├── pkcs7.h
+│   │   │           │   │       ├── pkcs7err.h
+│   │   │           │   │       ├── rand.h
+│   │   │           │   │       ├── rand_drbg.h
+│   │   │           │   │       ├── randerr.h
+│   │   │           │   │       ├── rc2.h
+│   │   │           │   │       ├── rc4.h
+│   │   │           │   │       ├── rc5.h
+│   │   │           │   │       ├── ripemd.h
+│   │   │           │   │       ├── rsa.h
+│   │   │           │   │       ├── rsaerr.h
+│   │   │           │   │       ├── safestack.h
+│   │   │           │   │       ├── seed.h
+│   │   │           │   │       ├── sha.h
+│   │   │           │   │       ├── srp.h
+│   │   │           │   │       ├── srtp.h
+│   │   │           │   │       ├── ssl.h
+│   │   │           │   │       ├── ssl2.h
+│   │   │           │   │       ├── ssl3.h
+│   │   │           │   │       ├── sslerr.h
+│   │   │           │   │       ├── stack.h
+│   │   │           │   │       ├── store.h
+│   │   │           │   │       ├── storeerr.h
+│   │   │           │   │       ├── symhacks.h
+│   │   │           │   │       ├── tls1.h
+│   │   │           │   │       ├── ts.h
+│   │   │           │   │       ├── tserr.h
+│   │   │           │   │       ├── txt_db.h
+│   │   │           │   │       ├── ui.h
+│   │   │           │   │       ├── uierr.h
+│   │   │           │   │       ├── whrlpool.h
+│   │   │           │   │       ├── x509.h
+│   │   │           │   │       ├── x509_vfy.h
+│   │   │           │   │       ├── x509err.h
+│   │   │           │   │       ├── x509v3.h
+│   │   │           │   │       └── x509v3err.h
+│   │   │           │   └── lib
+│   │   │           │       ├── libcrypto.a
+│   │   │           │       └── libssl.a
+│   │   │           ├── build-all.sh
+│   │   │           ├── build.sh
+│   │   │           ├── x86
+│   │   │           │   ├── include
+│   │   │           │   │   ├── internal
+│   │   │           │   │   │   ├── __DECC_INCLUDE_EPILOGUE.H
+│   │   │           │   │   │   ├── __DECC_INCLUDE_PROLOGUE.H
+│   │   │           │   │   │   ├── bio.h
+│   │   │           │   │   │   ├── comp.h
+│   │   │           │   │   │   ├── conf.h
+│   │   │           │   │   │   ├── constant_time_locl.h
+│   │   │           │   │   │   ├── cryptlib.h
+│   │   │           │   │   │   ├── dane.h
+│   │   │           │   │   │   ├── dso.h
+│   │   │           │   │   │   ├── dsoerr.h
+│   │   │           │   │   │   ├── err.h
+│   │   │           │   │   │   ├── nelem.h
+│   │   │           │   │   │   ├── numbers.h
+│   │   │           │   │   │   ├── o_dir.h
+│   │   │           │   │   │   ├── o_str.h
+│   │   │           │   │   │   ├── refcount.h
+│   │   │           │   │   │   ├── sockets.h
+│   │   │           │   │   │   ├── sslconf.h
+│   │   │           │   │   │   ├── thread_once.h
+│   │   │           │   │   │   └── tsan_assist.h
+│   │   │           │   │   └── openssl
+│   │   │           │   │       ├── __DECC_INCLUDE_EPILOGUE.H
+│   │   │           │   │       ├── __DECC_INCLUDE_PROLOGUE.H
+│   │   │           │   │       ├── aes.h
+│   │   │           │   │       ├── asn1.h
+│   │   │           │   │       ├── asn1_mac.h
+│   │   │           │   │       ├── asn1err.h
+│   │   │           │   │       ├── asn1t.h
+│   │   │           │   │       ├── async.h
+│   │   │           │   │       ├── asyncerr.h
+│   │   │           │   │       ├── bio.h
+│   │   │           │   │       ├── bioerr.h
+│   │   │           │   │       ├── blowfish.h
+│   │   │           │   │       ├── bn.h
+│   │   │           │   │       ├── bnerr.h
+│   │   │           │   │       ├── buffer.h
+│   │   │           │   │       ├── buffererr.h
+│   │   │           │   │       ├── camellia.h
+│   │   │           │   │       ├── cast.h
+│   │   │           │   │       ├── cmac.h
+│   │   │           │   │       ├── cms.h
+│   │   │           │   │       ├── cmserr.h
+│   │   │           │   │       ├── comp.h
+│   │   │           │   │       ├── comperr.h
+│   │   │           │   │       ├── conf.h
+│   │   │           │   │       ├── conf_api.h
+│   │   │           │   │       ├── conferr.h
+│   │   │           │   │       ├── crypto.h
+│   │   │           │   │       ├── cryptoerr.h
+│   │   │           │   │       ├── ct.h
+│   │   │           │   │       ├── cterr.h
+│   │   │           │   │       ├── des.h
+│   │   │           │   │       ├── dh.h
+│   │   │           │   │       ├── dherr.h
+│   │   │           │   │       ├── dsa.h
+│   │   │           │   │       ├── dsaerr.h
+│   │   │           │   │       ├── dtls1.h
+│   │   │           │   │       ├── e_os2.h
+│   │   │           │   │       ├── ebcdic.h
+│   │   │           │   │       ├── ec.h
+│   │   │           │   │       ├── ecdh.h
+│   │   │           │   │       ├── ecdsa.h
+│   │   │           │   │       ├── ecerr.h
+│   │   │           │   │       ├── engine.h
+│   │   │           │   │       ├── engineerr.h
+│   │   │           │   │       ├── err.h
+│   │   │           │   │       ├── evp.h
+│   │   │           │   │       ├── evperr.h
+│   │   │           │   │       ├── hmac.h
+│   │   │           │   │       ├── idea.h
+│   │   │           │   │       ├── kdf.h
+│   │   │           │   │       ├── kdferr.h
+│   │   │           │   │       ├── lhash.h
+│   │   │           │   │       ├── md2.h
+│   │   │           │   │       ├── md4.h
+│   │   │           │   │       ├── md5.h
+│   │   │           │   │       ├── mdc2.h
+│   │   │           │   │       ├── modes.h
+│   │   │           │   │       ├── obj_mac.h
+│   │   │           │   │       ├── objects.h
+│   │   │           │   │       ├── objectserr.h
+│   │   │           │   │       ├── ocsp.h
+│   │   │           │   │       ├── ocsperr.h
+│   │   │           │   │       ├── opensslconf.h
+│   │   │           │   │       ├── opensslconf.h.in
+│   │   │           │   │       ├── opensslv.h
+│   │   │           │   │       ├── ossl_typ.h
+│   │   │           │   │       ├── pem.h
+│   │   │           │   │       ├── pem2.h
+│   │   │           │   │       ├── pemerr.h
+│   │   │           │   │       ├── pkcs12.h
+│   │   │           │   │       ├── pkcs12err.h
+│   │   │           │   │       ├── pkcs7.h
+│   │   │           │   │       ├── pkcs7err.h
+│   │   │           │   │       ├── rand.h
+│   │   │           │   │       ├── rand_drbg.h
+│   │   │           │   │       ├── randerr.h
+│   │   │           │   │       ├── rc2.h
+│   │   │           │   │       ├── rc4.h
+│   │   │           │   │       ├── rc5.h
+│   │   │           │   │       ├── ripemd.h
+│   │   │           │   │       ├── rsa.h
+│   │   │           │   │       ├── rsaerr.h
+│   │   │           │   │       ├── safestack.h
+│   │   │           │   │       ├── seed.h
+│   │   │           │   │       ├── sha.h
+│   │   │           │   │       ├── srp.h
+│   │   │           │   │       ├── srtp.h
+│   │   │           │   │       ├── ssl.h
+│   │   │           │   │       ├── ssl2.h
+│   │   │           │   │       ├── ssl3.h
+│   │   │           │   │       ├── sslerr.h
+│   │   │           │   │       ├── stack.h
+│   │   │           │   │       ├── store.h
+│   │   │           │   │       ├── storeerr.h
+│   │   │           │   │       ├── symhacks.h
+│   │   │           │   │       ├── tls1.h
+│   │   │           │   │       ├── ts.h
+│   │   │           │   │       ├── tserr.h
+│   │   │           │   │       ├── txt_db.h
+│   │   │           │   │       ├── ui.h
+│   │   │           │   │       ├── uierr.h
+│   │   │           │   │       ├── whrlpool.h
+│   │   │           │   │       ├── x509.h
+│   │   │           │   │       ├── x509_vfy.h
+│   │   │           │   │       ├── x509err.h
+│   │   │           │   │       ├── x509v3.h
+│   │   │           │   │       └── x509v3err.h
+│   │   │           │   └── lib
+│   │   │           │       ├── libcrypto.a
+│   │   │           │       └── libssl.a
+│   │   │           └── x86_64
+│   │   │               ├── include
+│   │   │               │   ├── internal
+│   │   │               │   │   ├── __DECC_INCLUDE_EPILOGUE.H
+│   │   │               │   │   ├── __DECC_INCLUDE_PROLOGUE.H
+│   │   │               │   │   ├── bio.h
+│   │   │               │   │   ├── comp.h
+│   │   │               │   │   ├── conf.h
+│   │   │               │   │   ├── constant_time_locl.h
+│   │   │               │   │   ├── cryptlib.h
+│   │   │               │   │   ├── dane.h
+│   │   │               │   │   ├── dso.h
+│   │   │               │   │   ├── dsoerr.h
+│   │   │               │   │   ├── err.h
+│   │   │               │   │   ├── nelem.h
+│   │   │               │   │   ├── numbers.h
+│   │   │               │   │   ├── o_dir.h
+│   │   │               │   │   ├── o_str.h
+│   │   │               │   │   ├── refcount.h
+│   │   │               │   │   ├── sockets.h
+│   │   │               │   │   ├── sslconf.h
+│   │   │               │   │   ├── thread_once.h
+│   │   │               │   │   └── tsan_assist.h
+│   │   │               │   └── openssl
+│   │   │               │       ├── __DECC_INCLUDE_EPILOGUE.H
+│   │   │               │       ├── __DECC_INCLUDE_PROLOGUE.H
+│   │   │               │       ├── aes.h
+│   │   │               │       ├── asn1.h
+│   │   │               │       ├── asn1_mac.h
+│   │   │               │       ├── asn1err.h
+│   │   │               │       ├── asn1t.h
+│   │   │               │       ├── async.h
+│   │   │               │       ├── asyncerr.h
+│   │   │               │       ├── bio.h
+│   │   │               │       ├── bioerr.h
+│   │   │               │       ├── blowfish.h
+│   │   │               │       ├── bn.h
+│   │   │               │       ├── bnerr.h
+│   │   │               │       ├── buffer.h
+│   │   │               │       ├── buffererr.h
+│   │   │               │       ├── camellia.h
+│   │   │               │       ├── cast.h
+│   │   │               │       ├── cmac.h
+│   │   │               │       ├── cms.h
+│   │   │               │       ├── cmserr.h
+│   │   │               │       ├── comp.h
+│   │   │               │       ├── comperr.h
+│   │   │               │       ├── conf.h
+│   │   │               │       ├── conf_api.h
+│   │   │               │       ├── conferr.h
+│   │   │               │       ├── crypto.h
+│   │   │               │       ├── cryptoerr.h
+│   │   │               │       ├── ct.h
+│   │   │               │       ├── cterr.h
+│   │   │               │       ├── des.h
+│   │   │               │       ├── dh.h
+│   │   │               │       ├── dherr.h
+│   │   │               │       ├── dsa.h
+│   │   │               │       ├── dsaerr.h
+│   │   │               │       ├── dtls1.h
+│   │   │               │       ├── e_os2.h
+│   │   │               │       ├── ebcdic.h
+│   │   │               │       ├── ec.h
+│   │   │               │       ├── ecdh.h
+│   │   │               │       ├── ecdsa.h
+│   │   │               │       ├── ecerr.h
+│   │   │               │       ├── engine.h
+│   │   │               │       ├── engineerr.h
+│   │   │               │       ├── err.h
+│   │   │               │       ├── evp.h
+│   │   │               │       ├── evperr.h
+│   │   │               │       ├── hmac.h
+│   │   │               │       ├── idea.h
+│   │   │               │       ├── kdf.h
+│   │   │               │       ├── kdferr.h
+│   │   │               │       ├── lhash.h
+│   │   │               │       ├── md2.h
+│   │   │               │       ├── md4.h
+│   │   │               │       ├── md5.h
+│   │   │               │       ├── mdc2.h
+│   │   │               │       ├── modes.h
+│   │   │               │       ├── obj_mac.h
+│   │   │               │       ├── objects.h
+│   │   │               │       ├── objectserr.h
+│   │   │               │       ├── ocsp.h
+│   │   │               │       ├── ocsperr.h
+│   │   │               │       ├── opensslconf.h
+│   │   │               │       ├── opensslconf.h.in
+│   │   │               │       ├── opensslv.h
+│   │   │               │       ├── ossl_typ.h
+│   │   │               │       ├── pem.h
+│   │   │               │       ├── pem2.h
+│   │   │               │       ├── pemerr.h
+│   │   │               │       ├── pkcs12.h
+│   │   │               │       ├── pkcs12err.h
+│   │   │               │       ├── pkcs7.h
+│   │   │               │       ├── pkcs7err.h
+│   │   │               │       ├── rand.h
+│   │   │               │       ├── rand_drbg.h
+│   │   │               │       ├── randerr.h
+│   │   │               │       ├── rc2.h
+│   │   │               │       ├── rc4.h
+│   │   │               │       ├── rc5.h
+│   │   │               │       ├── ripemd.h
+│   │   │               │       ├── rsa.h
+│   │   │               │       ├── rsaerr.h
+│   │   │               │       ├── safestack.h
+│   │   │               │       ├── seed.h
+│   │   │               │       ├── sha.h
+│   │   │               │       ├── srp.h
+│   │   │               │       ├── srtp.h
+│   │   │               │       ├── ssl.h
+│   │   │               │       ├── ssl2.h
+│   │   │               │       ├── ssl3.h
+│   │   │               │       ├── sslerr.h
+│   │   │               │       ├── stack.h
+│   │   │               │       ├── store.h
+│   │   │               │       ├── storeerr.h
+│   │   │               │       ├── symhacks.h
+│   │   │               │       ├── tls1.h
+│   │   │               │       ├── ts.h
+│   │   │               │       ├── tserr.h
+│   │   │               │       ├── txt_db.h
+│   │   │               │       ├── ui.h
+│   │   │               │       ├── uierr.h
+│   │   │               │       ├── whrlpool.h
+│   │   │               │       ├── x509.h
+│   │   │               │       ├── x509_vfy.h
+│   │   │               │       ├── x509err.h
+│   │   │               │       ├── x509v3.h
+│   │   │               │       └── x509v3err.h
+│   │   │               └── lib
+│   │   │                   ├── libcrypto.a
+│   │   │                   └── libssl.a
+│   │   └── cpp
+│   │       ├── CMakeLists.txt
+│   │       ├── README.md
+│   │       └── tonjson_example.cpp
+│   ├── fec
+│   │   ├── CMakeLists.txt
+│   │   ├── fec.cpp
+│   │   └── fec.h
+│   ├── flake.lock
+│   ├── flake.nix
+│   ├── git.cc.in
+│   ├── git.h
+│   ├── git_watcher.cmake
+│   ├── http
+│   │   ├── CMakeLists.txt
+│   │   ├── http-client.cpp
+│   │   ├── http-client.h
+│   │   ├── http-client.hpp
+│   │   ├── http-connection.cpp
+│   │   ├── http-connection.h
+│   │   ├── http-inbound-connection.cpp
+│   │   ├── http-inbound-connection.h
+│   │   ├── http-outbound-connection.cpp
+│   │   ├── http-outbound-connection.h
+│   │   ├── http-proxy.cpp
+│   │   ├── http-server.cpp
+│   │   ├── http-server.h
+│   │   ├── http.cpp
+│   │   └── http.h
+│   ├── keyring
+│   │   ├── CMakeLists.txt
+│   │   ├── keyring.cpp
+│   │   ├── keyring.h
+│   │   └── keyring.hpp
+│   ├── keys
+│   │   ├── CMakeLists.txt
+│   │   ├── encryptor.cpp
+│   │   ├── encryptor.h
+│   │   ├── encryptor.hpp
+│   │   ├── keys.cpp
+│   │   └── keys.hpp
+│   ├── lite-client
+│   │   ├── CMakeLists.txt
+│   │   ├── lite-client-common.cpp
+│   │   ├── lite-client-common.h
+│   │   ├── lite-client.cpp
+│   │   └── lite-client.h
+│   ├── lite-client-docs
+│   │   ├── DISCLAIMER
+│   │   └── README
+│   ├── memprof
+│   │   ├── CMakeLists.txt
+│   │   └── memprof
+│   │       ├── memprof.cpp
+│   │       └── memprof.h
+│   ├── overlay
+│   │   ├── CMakeLists.txt
+│   │   ├── overlay-broadcast.cpp
+│   │   ├── overlay-broadcast.hpp
+│   │   ├── overlay-fec-broadcast.cpp
+│   │   ├── overlay-fec-broadcast.hpp
+│   │   ├── overlay-fec.cpp
+│   │   ├── overlay-fec.hpp
+│   │   ├── overlay-id.hpp
+│   │   ├── overlay-manager.cpp
+│   │   ├── overlay-manager.h
+│   │   ├── overlay-peers.cpp
+│   │   ├── overlay.cpp
+│   │   ├── overlay.h
+│   │   ├── overlay.hpp
+│   │   └── overlays.h
+│   ├── recent_changelog.md
+│   ├── rldp
+│   │   ├── CMakeLists.txt
+│   │   ├── rldp-in.hpp
+│   │   ├── rldp-peer.cpp
+│   │   ├── rldp-peer.h
+│   │   ├── rldp-peer.hpp
+│   │   ├── rldp.cpp
+│   │   ├── rldp.h
+│   │   └── rldp.hpp
+│   ├── rldp-http-proxy
+│   │   ├── CMakeLists.txt
+│   │   ├── DNSResolver.cpp
+│   │   ├── DNSResolver.h
+│   │   └── rldp-http-proxy.cpp
+│   ├── rldp2
+│   │   ├── Ack.cpp
+│   │   ├── Ack.h
+│   │   ├── Bbr.cpp
+│   │   ├── Bbr.h
+│   │   ├── BdwStats.cpp
+│   │   ├── BdwStats.h
+│   │   ├── CMakeLists.txt
+│   │   ├── FecHelper.cpp
+│   │   ├── FecHelper.h
+│   │   ├── InboundTransfer.cpp
+│   │   ├── InboundTransfer.h
+│   │   ├── LossSender.cpp
+│   │   ├── LossSender.h
+│   │   ├── LossStats.cpp
+│   │   ├── LossStats.h
+│   │   ├── OutboundTransfer.cpp
+│   │   ├── OutboundTransfer.h
+│   │   ├── Pacer.cpp
+│   │   ├── Pacer.h
+│   │   ├── RldpConnection.cpp
+│   │   ├── RldpConnection.h
+│   │   ├── RldpReceiver.cpp
+│   │   ├── RldpReceiver.h
+│   │   ├── RldpSender.cpp
+│   │   ├── RldpSender.h
+│   │   ├── RttStats.cpp
+│   │   ├── RttStats.h
+│   │   ├── SenderPackets.cpp
+│   │   ├── SenderPackets.h
+│   │   ├── rldp-in.hpp
+│   │   ├── rldp.cpp
+│   │   ├── rldp.h
+│   │   └── rldp.hpp
+│   ├── run-clang-format.sh
+│   ├── shell.nix
+│   ├── storage
+│   │   ├── Bitset.h
+│   │   ├── CMakeLists.txt
+│   │   ├── LoadSpeed.cpp
+│   │   ├── LoadSpeed.h
+│   │   ├── MerkleTree.cpp
+│   │   ├── MerkleTree.h
+│   │   ├── MicrochunkTree.cpp
+│   │   ├── MicrochunkTree.h
+│   │   ├── NodeActor.cpp
+│   │   ├── NodeActor.h
+│   │   ├── PartsHelper.h
+│   │   ├── PeerActor.cpp
+│   │   ├── PeerActor.h
+│   │   ├── PeerManager.h
+│   │   ├── PeerState.cpp
+│   │   ├── PeerState.h
+│   │   ├── SpeedLimiter.cpp
+│   │   ├── SpeedLimiter.h
+│   │   ├── Torrent.cpp
+│   │   ├── Torrent.h
+│   │   ├── TorrentCreator.cpp
+│   │   ├── TorrentCreator.h
+│   │   ├── TorrentHeader.cpp
+│   │   ├── TorrentHeader.h
+│   │   ├── TorrentHeader.hpp
+│   │   ├── TorrentInfo.cpp
+│   │   ├── TorrentInfo.h
+│   │   ├── TorrentMeta.cpp
+│   │   ├── TorrentMeta.h
+│   │   ├── db.h
+│   │   ├── storage-cli.cpp
+│   │   ├── storage-daemon
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── StorageManager.cpp
+│   │   │   ├── StorageManager.h
+│   │   │   ├── StorageProvider.cpp
+│   │   │   ├── StorageProvider.h
+│   │   │   ├── smartcont
+│   │   │   │   ├── README.md
+│   │   │   │   ├── build.sh
+│   │   │   │   ├── constants.fc
+│   │   │   │   ├── embed-provider-code.cpp
+│   │   │   │   ├── storage-contract-code.boc
+│   │   │   │   ├── storage-contract.fc
+│   │   │   │   ├── storage-contract.fif
+│   │   │   │   ├── storage-provider-code.boc
+│   │   │   │   ├── storage-provider.fc
+│   │   │   │   └── storage-provider.fif
+│   │   │   ├── smc-util.cpp
+│   │   │   ├── smc-util.h
+│   │   │   ├── storage-daemon-cli.cpp
+│   │   │   └── storage-daemon.cpp
+│   │   └── test
+│   │       └── storage.cpp
+│   ├── tdactor
+│   │   ├── CMakeLists.txt
+│   │   ├── benchmark
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── benchmark.cpp
+│   │   │   └── third_party
+│   │   │       ├── FAAArrayQueue.h
+│   │   │       ├── HazardPointers.h
+│   │   │       ├── LCRQueue.h
+│   │   │       ├── LazyIndexArrayQueue.h
+│   │   │       ├── MoodyCamelQueue.h
+│   │   │       ├── mp-queue.c
+│   │   │       └── mp-queue.h
+│   │   ├── td
+│   │   │   └── actor
+│   │   │       ├── ActorId.h
+│   │   │       ├── ActorOwn.h
+│   │   │       ├── ActorShared.h
+│   │   │       ├── MultiPromise.cpp
+│   │   │       ├── MultiPromise.h
+│   │   │       ├── PromiseFuture.h
+│   │   │       ├── actor.h
+│   │   │       ├── common.h
+│   │   │       └── core
+│   │   │           ├── Actor.h
+│   │   │           ├── ActorExecuteContext.h
+│   │   │           ├── ActorExecutor.cpp
+│   │   │           ├── ActorExecutor.h
+│   │   │           ├── ActorInfo.h
+│   │   │           ├── ActorInfoCreator.h
+│   │   │           ├── ActorLocker.h
+│   │   │           ├── ActorMailbox.h
+│   │   │           ├── ActorMessage.h
+│   │   │           ├── ActorSignals.h
+│   │   │           ├── ActorState.h
+│   │   │           ├── Context.h
+│   │   │           ├── CpuWorker.cpp
+│   │   │           ├── CpuWorker.h
+│   │   │           ├── IoWorker.cpp
+│   │   │           ├── IoWorker.h
+│   │   │           ├── Scheduler.cpp
+│   │   │           ├── Scheduler.h
+│   │   │           ├── SchedulerContext.h
+│   │   │           ├── SchedulerId.h
+│   │   │           └── SchedulerMessage.h
+│   │   └── test
+│   │       ├── actors_core.cpp
+│   │       └── actors_promise.cpp
+│   ├── tddb
+│   │   ├── CMakeLists.txt
+│   │   ├── td
+│   │   │   └── db
+│   │   │       ├── KeyValue.h
+│   │   │       ├── KeyValueAsync.h
+│   │   │       ├── MemoryKeyValue.cpp
+│   │   │       ├── MemoryKeyValue.h
+│   │   │       ├── RocksDb.cpp
+│   │   │       ├── RocksDb.h
+│   │   │       ├── binlog
+│   │   │       │   ├── Binlog.cpp
+│   │   │       │   ├── Binlog.h
+│   │   │       │   ├── BinlogReaderHelper.cpp
+│   │   │       │   ├── BinlogReaderHelper.h
+│   │   │       │   └── BinlogReaderInterface.h
+│   │   │       └── utils
+│   │   │           ├── BlobView.cpp
+│   │   │           ├── BlobView.h
+│   │   │           ├── ChainBuffer.cpp
+│   │   │           ├── ChainBuffer.h
+│   │   │           ├── CyclicBuffer.cpp
+│   │   │           ├── CyclicBuffer.h
+│   │   │           ├── FileSyncState.cpp
+│   │   │           ├── FileSyncState.h
+│   │   │           ├── FileToStreamActor.cpp
+│   │   │           ├── FileToStreamActor.h
+│   │   │           ├── StreamInterface.cpp
+│   │   │           ├── StreamInterface.h
+│   │   │           ├── StreamToFileActor.cpp
+│   │   │           └── StreamToFileActor.h
+│   │   └── test
+│   │       ├── binlog.cpp
+│   │       ├── io-bench.cpp
+│   │       └── key_value.cpp
+│   ├── tdfec
+│   │   ├── CMakeLists.txt
+│   │   ├── benchmark
+│   │   │   ├── CMakeLists.txt
+│   │   │   └── benchmark.cpp
+│   │   ├── td
+│   │   │   └── fec
+│   │   │       ├── algebra
+│   │   │       │   ├── BeliefPropagationDecoding.cpp
+│   │   │       │   ├── BeliefPropagationDecoding.h
+│   │   │       │   ├── GaussianElimination.cpp
+│   │   │       │   ├── GaussianElimination.h
+│   │   │       │   ├── InactivationDecoding.cpp
+│   │   │       │   ├── InactivationDecoding.h
+│   │   │       │   ├── MatrixGF2.cpp
+│   │   │       │   ├── MatrixGF2.h
+│   │   │       │   ├── MatrixGF256.cpp
+│   │   │       │   ├── MatrixGF256.h
+│   │   │       │   ├── Octet.cpp
+│   │   │       │   ├── Octet.h
+│   │   │       │   ├── Simd.h
+│   │   │       │   ├── SparseMatrixGF2.cpp
+│   │   │       │   └── SparseMatrixGF2.h
+│   │   │       ├── common
+│   │   │       │   ├── SymbolRef.h
+│   │   │       │   ├── SymbolsView.cpp
+│   │   │       │   └── SymbolsView.h
+│   │   │       ├── fec.cpp
+│   │   │       ├── fec.h
+│   │   │       ├── online
+│   │   │       │   ├── Decoder.cpp
+│   │   │       │   ├── Decoder.h
+│   │   │       │   ├── Encoder.cpp
+│   │   │       │   ├── Encoder.h
+│   │   │       │   ├── Rfc.cpp
+│   │   │       │   └── Rfc.h
+│   │   │       └── raptorq
+│   │   │           ├── Decoder.cpp
+│   │   │           ├── Decoder.h
+│   │   │           ├── Encoder.cpp
+│   │   │           ├── Encoder.h
+│   │   │           ├── RawEncoder.cpp
+│   │   │           ├── RawEncoder.h
+│   │   │           ├── Rfc.cpp
+│   │   │           ├── Rfc.h
+│   │   │           ├── Solver.cpp
+│   │   │           └── Solver.h
+│   │   └── test
+│   │       ├── LibRaptorQ.cpp
+│   │       ├── LibRaptorQ.h
+│   │       └── fec-test.cpp
+│   ├── tdnet
+│   │   ├── CMakeLists.txt
+│   │   ├── example
+│   │   │   ├── tcp_ping_pong.cpp
+│   │   │   └── udp_ping_pong.cpp
+│   │   ├── td
+│   │   │   └── net
+│   │   │       ├── FdListener.cpp
+│   │   │       ├── FdListener.h
+│   │   │       ├── TcpListener.cpp
+│   │   │       ├── TcpListener.h
+│   │   │       ├── UdpServer.cpp
+│   │   │       └── UdpServer.h
+│   │   └── test
+│   │       └── net-test.cpp
+│   ├── tdtl
+│   │   ├── CMakeLists.txt
+│   │   └── td
+│   │       └── tl
+│   │           ├── tl_config.cpp
+│   │           ├── tl_config.h
+│   │           ├── tl_config.md
+│   │           ├── tl_core.cpp
+│   │           ├── tl_core.h
+│   │           ├── tl_file_outputer.cpp
+│   │           ├── tl_file_outputer.h
+│   │           ├── tl_file_utils.cpp
+│   │           ├── tl_file_utils.h
+│   │           ├── tl_generate.cpp
+│   │           ├── tl_generate.h
+│   │           ├── tl_outputer.cpp
+│   │           ├── tl_outputer.h
+│   │           ├── tl_simple.h
+│   │           ├── tl_simple_parser.h
+│   │           ├── tl_string_outputer.cpp
+│   │           ├── tl_string_outputer.h
+│   │           ├── tl_writer.cpp
+│   │           └── tl_writer.h
+│   ├── tdutils
+│   │   ├── CMakeLists.txt
+│   │   ├── generate
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── generate_mime_types_gperf.cpp
+│   │   │   └── mime_types.txt
+│   │   ├── td
+│   │   │   └── utils
+│   │   │       ├── AesCtrByteFlow.h
+│   │   │       ├── AtomicRead.h
+│   │   │       ├── BigNum.cpp
+│   │   │       ├── BigNum.h
+│   │   │       ├── BufferedFd.h
+│   │   │       ├── BufferedReader.h
+│   │   │       ├── BufferedUdp.cpp
+│   │   │       ├── BufferedUdp.h
+│   │   │       ├── ByteFlow.h
+│   │   │       ├── CancellationToken.h
+│   │   │       ├── ChangesProcessor.h
+│   │   │       ├── Closure.h
+│   │   │       ├── ConcurrentHashTable.h
+│   │   │       ├── Container.h
+│   │   │       ├── Context.h
+│   │   │       ├── DecTree.h
+│   │   │       ├── Destructor.h
+│   │   │       ├── Enumerator.h
+│   │   │       ├── EpochBasedMemoryReclamation.h
+│   │   │       ├── FileLog.cpp
+│   │   │       ├── FileLog.h
+│   │   │       ├── FloodControlFast.h
+│   │   │       ├── FloodControlStrict.h
+│   │   │       ├── GitInfo.cpp
+│   │   │       ├── GitInfo.h
+│   │   │       ├── Gzip.cpp
+│   │   │       ├── Gzip.h
+│   │   │       ├── GzipByteFlow.cpp
+│   │   │       ├── GzipByteFlow.h
+│   │   │       ├── Hash.h
+│   │   │       ├── HashMap.h
+│   │   │       ├── HashSet.h
+│   │   │       ├── HazardPointers.h
+│   │   │       ├── Heap.h
+│   │   │       ├── Hints.cpp
+│   │   │       ├── Hints.h
+│   │   │       ├── HttpUrl.cpp
+│   │   │       ├── HttpUrl.h
+│   │   │       ├── JsonBuilder.cpp
+│   │   │       ├── JsonBuilder.h
+│   │   │       ├── List.h
+│   │   │       ├── MemoryLog.h
+│   │   │       ├── MimeType.cpp
+│   │   │       ├── MimeType.h
+│   │   │       ├── MovableValue.h
+│   │   │       ├── MpmcQueue.cpp
+│   │   │       ├── MpmcQueue.h
+│   │   │       ├── MpmcWaiter.h
+│   │   │       ├── MpscLinkQueue.h
+│   │   │       ├── MpscPollableQueue.h
+│   │   │       ├── Named.h
+│   │   │       ├── ObjectPool.h
+│   │   │       ├── Observer.h
+│   │   │       ├── OptionParser.cpp
+│   │   │       ├── OptionParser.h
+│   │   │       ├── OptionsParser.cpp
+│   │   │       ├── OptionsParser.h
+│   │   │       ├── OrderedEventsProcessor.h
+│   │   │       ├── Parser.h
+│   │   │       ├── PathView.cpp
+│   │   │       ├── PathView.h
+│   │   │       ├── Random.cpp
+│   │   │       ├── Random.h
+│   │   │       ├── ScopeGuard.h
+│   │   │       ├── SharedObjectPool.h
+│   │   │       ├── SharedSlice.cpp
+│   │   │       ├── SharedSlice.h
+│   │   │       ├── Slice-decl.h
+│   │   │       ├── Slice.cpp
+│   │   │       ├── Slice.h
+│   │   │       ├── Span.h
+│   │   │       ├── SpinLock.h
+│   │   │       ├── StackAllocator.cpp
+│   │   │       ├── StackAllocator.h
+│   │   │       ├── Status.cpp
+│   │   │       ├── Status.h
+│   │   │       ├── StealingQueue.h
+│   │   │       ├── Storer.h
+│   │   │       ├── StorerBase.h
+│   │   │       ├── StringBuilder.cpp
+│   │   │       ├── StringBuilder.h
+│   │   │       ├── ThreadLocalStorage.h
+│   │   │       ├── ThreadSafeCounter.h
+│   │   │       ├── Time.cpp
+│   │   │       ├── Time.h
+│   │   │       ├── TimedStat.h
+│   │   │       ├── Timer.cpp
+│   │   │       ├── Timer.h
+│   │   │       ├── TsFileLog.cpp
+│   │   │       ├── TsFileLog.h
+│   │   │       ├── TsList.h
+│   │   │       ├── UInt.h
+│   │   │       ├── Variant.h
+│   │   │       ├── VectorQueue.h
+│   │   │       ├── as.h
+│   │   │       ├── base64.cpp
+│   │   │       ├── base64.h
+│   │   │       ├── benchmark.h
+│   │   │       ├── bits.h
+│   │   │       ├── buffer.cpp
+│   │   │       ├── buffer.h
+│   │   │       ├── check.cpp
+│   │   │       ├── check.h
+│   │   │       ├── common.h
+│   │   │       ├── config.h.in
+│   │   │       ├── crypto.cpp
+│   │   │       ├── crypto.h
+│   │   │       ├── date.h
+│   │   │       ├── filesystem.cpp
+│   │   │       ├── filesystem.h
+│   │   │       ├── find_boundary.cpp
+│   │   │       ├── find_boundary.h
+│   │   │       ├── format.h
+│   │   │       ├── int_types.h
+│   │   │       ├── invoke.h
+│   │   │       ├── logging.cpp
+│   │   │       ├── logging.h
+│   │   │       ├── misc.cpp
+│   │   │       ├── misc.h
+│   │   │       ├── optional.h
+│   │   │       ├── overloaded.h
+│   │   │       ├── port
+│   │   │       │   ├── Clocks.cpp
+│   │   │       │   ├── Clocks.h
+│   │   │       │   ├── CxCli.h
+│   │   │       │   ├── EventFd.h
+│   │   │       │   ├── EventFdBase.h
+│   │   │       │   ├── FileFd.cpp
+│   │   │       │   ├── FileFd.h
+│   │   │       │   ├── IPAddress.cpp
+│   │   │       │   ├── IPAddress.h
+│   │   │       │   ├── IoSlice.h
+│   │   │       │   ├── MemoryMapping.cpp
+│   │   │       │   ├── MemoryMapping.h
+│   │   │       │   ├── Poll.h
+│   │   │       │   ├── PollBase.h
+│   │   │       │   ├── PollFlags.cpp
+│   │   │       │   ├── PollFlags.h
+│   │   │       │   ├── RwMutex.h
+│   │   │       │   ├── ServerSocketFd.cpp
+│   │   │       │   ├── ServerSocketFd.h
+│   │   │       │   ├── SocketFd.cpp
+│   │   │       │   ├── SocketFd.h
+│   │   │       │   ├── Stat.cpp
+│   │   │       │   ├── Stat.h
+│   │   │       │   ├── StdStreams.cpp
+│   │   │       │   ├── StdStreams.h
+│   │   │       │   ├── UdpSocketFd.cpp
+│   │   │       │   ├── UdpSocketFd.h
+│   │   │       │   ├── config.h
+│   │   │       │   ├── detail
+│   │   │       │   │   ├── Epoll.cpp
+│   │   │       │   │   ├── Epoll.h
+│   │   │       │   │   ├── EventFdBsd.cpp
+│   │   │       │   │   ├── EventFdBsd.h
+│   │   │       │   │   ├── EventFdLinux.cpp
+│   │   │       │   │   ├── EventFdLinux.h
+│   │   │       │   │   ├── EventFdWindows.cpp
+│   │   │       │   │   ├── EventFdWindows.h
+│   │   │       │   │   ├── Iocp.cpp
+│   │   │       │   │   ├── Iocp.h
+│   │   │       │   │   ├── KQueue.cpp
+│   │   │       │   │   ├── KQueue.h
+│   │   │       │   │   ├── NativeFd.cpp
+│   │   │       │   │   ├── NativeFd.h
+│   │   │       │   │   ├── Poll.cpp
+│   │   │       │   │   ├── Poll.h
+│   │   │       │   │   ├── PollableFd.h
+│   │   │       │   │   ├── Select.cpp
+│   │   │       │   │   ├── Select.h
+│   │   │       │   │   ├── ThreadIdGuard.cpp
+│   │   │       │   │   ├── ThreadIdGuard.h
+│   │   │       │   │   ├── ThreadPthread.cpp
+│   │   │       │   │   ├── ThreadPthread.h
+│   │   │       │   │   ├── ThreadStl.h
+│   │   │       │   │   ├── WineventPoll.cpp
+│   │   │       │   │   ├── WineventPoll.h
+│   │   │       │   │   └── skip_eintr.h
+│   │   │       │   ├── path.cpp
+│   │   │       │   ├── path.h
+│   │   │       │   ├── platform.h
+│   │   │       │   ├── rlimit.cpp
+│   │   │       │   ├── rlimit.h
+│   │   │       │   ├── signals.cpp
+│   │   │       │   ├── signals.h
+│   │   │       │   ├── sleep.cpp
+│   │   │       │   ├── sleep.h
+│   │   │       │   ├── stacktrace.cpp
+│   │   │       │   ├── stacktrace.h
+│   │   │       │   ├── thread.h
+│   │   │       │   ├── thread_local.cpp
+│   │   │       │   ├── thread_local.h
+│   │   │       │   ├── uname.cpp
+│   │   │       │   ├── uname.h
+│   │   │       │   ├── user.cpp
+│   │   │       │   ├── user.h
+│   │   │       │   ├── wstring_convert.cpp
+│   │   │       │   └── wstring_convert.h
+│   │   │       ├── queue.h
+│   │   │       ├── tests.cpp
+│   │   │       ├── tests.h
+│   │   │       ├── tl_helpers.h
+│   │   │       ├── tl_parsers.cpp
+│   │   │       ├── tl_parsers.h
+│   │   │       ├── tl_storers.h
+│   │   │       ├── translit.cpp
+│   │   │       ├── translit.h
+│   │   │       ├── type_traits.h
+│   │   │       ├── uint128.h
+│   │   │       ├── unicode.cpp
+│   │   │       ├── unicode.h
+│   │   │       ├── unique_ptr.h
+│   │   │       ├── utf8.cpp
+│   │   │       └── utf8.h
+│   │   └── test
+│   │       ├── ConcurrentHashMap.cpp
+│   │       ├── Enumerator.cpp
+│   │       ├── EpochBasedMemoryReclamation.cpp
+│   │       ├── HazardPointers.cpp
+│   │       ├── List.cpp
+│   │       ├── MpmcQueue.cpp
+│   │       ├── MpmcWaiter.cpp
+│   │       ├── MpscLinkQueue.cpp
+│   │       ├── OptionParser.cpp
+│   │       ├── OrderedEventsProcessor.cpp
+│   │       ├── SharedObjectPool.cpp
+│   │       ├── SharedSlice.cpp
+│   │       ├── StealingQueue.cpp
+│   │       ├── buffer.cpp
+│   │       ├── crypto.cpp
+│   │       ├── filesystem.cpp
+│   │       ├── gzip.cpp
+│   │       ├── heap.cpp
+│   │       ├── json.cpp
+│   │       ├── log.cpp
+│   │       ├── misc.cpp
+│   │       ├── port.cpp
+│   │       ├── pq.cpp
+│   │       └── variant.cpp
+│   ├── terminal
+│   │   ├── CMakeLists.txt
+│   │   ├── terminal.cpp
+│   │   ├── terminal.h
+│   │   └── terminal.hpp
+│   ├── test
+│   │   ├── ed25519_crypto.cpp
+│   │   ├── generate-test-node-config.py
+│   │   ├── regression-tests.ans
+│   │   ├── test-adnl.cpp
+│   │   ├── test-catchain.cpp
+│   │   ├── test-dht.cpp
+│   │   ├── test-ext-client.cpp
+│   │   ├── test-ext-server.cpp
+│   │   ├── test-hello-world.cpp
+│   │   ├── test-http.cpp
+│   │   ├── test-node.cpp
+│   │   ├── test-rldp.cpp
+│   │   ├── test-rldp2.cpp
+│   │   ├── test-rocksdb.cpp
+│   │   ├── test-td-main.cpp
+│   │   ├── test-ton-collator.cpp
+│   │   ├── test-validator-session-state.cpp
+│   │   ├── test-validator-session.cpp
+│   │   └── test-validator.cpp
+│   ├── third-party
+│   │   ├── abseil-cpp
+│   │   ├── crc32c
+│   │   ├── libraptorq
+│   │   ├── rocksdb
+│   │   └── wingetopt
+│   │       ├── CMakeLists.txt
+│   │       ├── LICENSE
+│   │       ├── README.md
+│   │       └── src
+│   │           ├── getopt.c
+│   │           └── getopt.h
+│   ├── tl
+│   │   ├── CMakeLists.txt
+│   │   ├── generate
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── JavadocTlDocumentationGenerator.php
+│   │   │   ├── TlDocumentationGenerator.php
+│   │   │   ├── generate_common.cpp
+│   │   │   ├── generate_java.cpp
+│   │   │   ├── scheme
+│   │   │   │   ├── lite_api.tl
+│   │   │   │   ├── lite_api.tlo
+│   │   │   │   ├── ton_api.tl
+│   │   │   │   ├── ton_api.tlo
+│   │   │   │   ├── tonlib_api.tl
+│   │   │   │   ├── tonlib_api.tlo
+│   │   │   │   └── update-tlo.sh
+│   │   │   ├── tl_json_converter.cpp
+│   │   │   ├── tl_json_converter.h
+│   │   │   ├── tl_writer_cpp.cpp
+│   │   │   ├── tl_writer_cpp.h
+│   │   │   ├── tl_writer_h.cpp
+│   │   │   ├── tl_writer_h.h
+│   │   │   ├── tl_writer_hpp.cpp
+│   │   │   ├── tl_writer_hpp.h
+│   │   │   ├── tl_writer_java.cpp
+│   │   │   ├── tl_writer_java.h
+│   │   │   ├── tl_writer_jni_cpp.cpp
+│   │   │   ├── tl_writer_jni_cpp.h
+│   │   │   ├── tl_writer_jni_h.cpp
+│   │   │   ├── tl_writer_jni_h.h
+│   │   │   ├── tl_writer_td.cpp
+│   │   │   └── tl_writer_td.h
+│   │   └── tl
+│   │       ├── TlObject.h
+│   │       ├── tl_jni_object.cpp
+│   │       ├── tl_jni_object.h
+│   │       ├── tl_json.h
+│   │       ├── tl_object_parse.h
+│   │       └── tl_object_store.h
+│   ├── tl-utils
+│   │   ├── CMakeLists.txt
+│   │   ├── common-utils.hpp
+│   │   ├── lite-utils.cpp
+│   │   ├── lite-utils.hpp
+│   │   ├── tl-utils.cpp
+│   │   └── tl-utils.hpp
+│   ├── ton
+│   │   ├── lite-tl.hpp
+│   │   ├── ton-io.hpp
+│   │   ├── ton-shard.h
+│   │   ├── ton-tl.hpp
+│   │   └── ton-types.h
+│   ├── tonlib
+│   │   ├── CMakeLists.txt
+│   │   ├── TonlibConfig.cmake
+│   │   ├── test
+│   │   │   ├── offline.cpp
+│   │   │   └── online.cpp
+│   │   ├── tonlib
+│   │   │   ├── CellString.cpp
+│   │   │   ├── CellString.h
+│   │   │   ├── Client.cpp
+│   │   │   ├── Client.h
+│   │   │   ├── ClientActor.cpp
+│   │   │   ├── ClientActor.h
+│   │   │   ├── ClientJson.cpp
+│   │   │   ├── ClientJson.h
+│   │   │   ├── Config.cpp
+│   │   │   ├── Config.h
+│   │   │   ├── ExtClient.cpp
+│   │   │   ├── ExtClient.h
+│   │   │   ├── ExtClientLazy.cpp
+│   │   │   ├── ExtClientLazy.h
+│   │   │   ├── ExtClientOutbound.cpp
+│   │   │   ├── ExtClientOutbound.h
+│   │   │   ├── GenericAccount.cpp
+│   │   │   ├── GenericAccount.h
+│   │   │   ├── KeyStorage.cpp
+│   │   │   ├── KeyStorage.h
+│   │   │   ├── KeyValue.cpp
+│   │   │   ├── KeyValue.h
+│   │   │   ├── LastBlock.cpp
+│   │   │   ├── LastBlock.h
+│   │   │   ├── LastBlockStorage.cpp
+│   │   │   ├── LastBlockStorage.h
+│   │   │   ├── LastConfig.cpp
+│   │   │   ├── LastConfig.h
+│   │   │   ├── Logging.cpp
+│   │   │   ├── Logging.h
+│   │   │   ├── TestGiver.cpp
+│   │   │   ├── TestGiver.h
+│   │   │   ├── TestWallet.cpp
+│   │   │   ├── TestWallet.h
+│   │   │   ├── TonlibCallback.h
+│   │   │   ├── TonlibClient.cpp
+│   │   │   ├── TonlibClient.h
+│   │   │   ├── TonlibClientWrapper.cpp
+│   │   │   ├── TonlibClientWrapper.h
+│   │   │   ├── TonlibError.h
+│   │   │   ├── Wallet.cpp
+│   │   │   ├── Wallet.h
+│   │   │   ├── keys
+│   │   │   │   ├── DecryptedKey.cpp
+│   │   │   │   ├── DecryptedKey.h
+│   │   │   │   ├── EncryptedKey.cpp
+│   │   │   │   ├── EncryptedKey.h
+│   │   │   │   ├── Mnemonic.cpp
+│   │   │   │   ├── Mnemonic.h
+│   │   │   │   ├── SimpleEncryption.cpp
+│   │   │   │   ├── SimpleEncryption.h
+│   │   │   │   ├── bip39.cpp
+│   │   │   │   └── bip39.h
+│   │   │   ├── tonlib-cli.cpp
+│   │   │   ├── tonlib_client_json.cpp
+│   │   │   ├── tonlib_client_json.h
+│   │   │   ├── utils.cpp
+│   │   │   └── utils.h
+│   │   └── tonlibclientjson_export_list
+│   ├── tree.txt
+│   ├── utils
+│   │   ├── CMakeLists.txt
+│   │   ├── generate-random-id.cpp
+│   │   ├── json2tlo.cpp
+│   │   ├── opcode-timing.cpp
+│   │   └── pack-viewer.cpp
+│   ├── validator
+│   │   ├── CMakeLists.txt
+│   │   ├── apply-block.cpp
+│   │   ├── apply-block.hpp
+│   │   ├── block-handle.cpp
+│   │   ├── block-handle.hpp
+│   │   ├── db
+│   │   │   ├── archive-db.cpp
+│   │   │   ├── archive-db.hpp
+│   │   │   ├── archive-manager.cpp
+│   │   │   ├── archive-manager.hpp
+│   │   │   ├── archive-mover.cpp
+│   │   │   ├── archive-mover.hpp
+│   │   │   ├── archive-slice.cpp
+│   │   │   ├── archive-slice.hpp
+│   │   │   ├── archiver.cpp
+│   │   │   ├── archiver.hpp
+│   │   │   ├── celldb.cpp
+│   │   │   ├── celldb.hpp
+│   │   │   ├── fileref.cpp
+│   │   │   ├── fileref.hpp
+│   │   │   ├── files-async.hpp
+│   │   │   ├── package.cpp
+│   │   │   ├── package.hpp
+│   │   │   ├── rootdb.cpp
+│   │   │   ├── rootdb.hpp
+│   │   │   ├── statedb.cpp
+│   │   │   ├── statedb.hpp
+│   │   │   ├── staticfilesdb.cpp
+│   │   │   └── staticfilesdb.hpp
+│   │   ├── downloaders
+│   │   │   ├── download-state.cpp
+│   │   │   ├── download-state.hpp
+│   │   │   ├── wait-block-data-disk.cpp
+│   │   │   ├── wait-block-data-disk.hpp
+│   │   │   ├── wait-block-data.cpp
+│   │   │   ├── wait-block-data.hpp
+│   │   │   ├── wait-block-state-merge.cpp
+│   │   │   ├── wait-block-state-merge.hpp
+│   │   │   ├── wait-block-state.cpp
+│   │   │   └── wait-block-state.hpp
+│   │   ├── fabric.h
+│   │   ├── full-node-master.cpp
+│   │   ├── full-node-master.h
+│   │   ├── full-node-master.hpp
+│   │   ├── full-node-shard-queries.hpp
+│   │   ├── full-node-shard.cpp
+│   │   ├── full-node-shard.h
+│   │   ├── full-node-shard.hpp
+│   │   ├── full-node.cpp
+│   │   ├── full-node.h
+│   │   ├── full-node.hpp
+│   │   ├── get-next-key-blocks.cpp
+│   │   ├── get-next-key-blocks.h
+│   │   ├── impl
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── accept-block.cpp
+│   │   │   ├── accept-block.hpp
+│   │   │   ├── block.cpp
+│   │   │   ├── block.hpp
+│   │   │   ├── check-proof.cpp
+│   │   │   ├── check-proof.hpp
+│   │   │   ├── collate-query-impl.h
+│   │   │   ├── collator-impl.h
+│   │   │   ├── collator.cpp
+│   │   │   ├── collator.h
+│   │   │   ├── config.cpp
+│   │   │   ├── config.hpp
+│   │   │   ├── external-message.cpp
+│   │   │   ├── external-message.hpp
+│   │   │   ├── fabric.cpp
+│   │   │   ├── ihr-message.cpp
+│   │   │   ├── ihr-message.hpp
+│   │   │   ├── liteserver.cpp
+│   │   │   ├── liteserver.hpp
+│   │   │   ├── message-queue.cpp
+│   │   │   ├── message-queue.hpp
+│   │   │   ├── proof.cpp
+│   │   │   ├── proof.hpp
+│   │   │   ├── shard.cpp
+│   │   │   ├── shard.hpp
+│   │   │   ├── signature-set.cpp
+│   │   │   ├── signature-set.hpp
+│   │   │   ├── top-shard-descr.cpp
+│   │   │   ├── top-shard-descr.hpp
+│   │   │   ├── validate-query.cpp
+│   │   │   ├── validate-query.hpp
+│   │   │   ├── validator-set.cpp
+│   │   │   └── validator-set.hpp
+│   │   ├── import-db-slice.cpp
+│   │   ├── import-db-slice.hpp
+│   │   ├── interfaces
+│   │   │   ├── block-handle.h
+│   │   │   ├── block.h
+│   │   │   ├── config.h
+│   │   │   ├── db.h
+│   │   │   ├── external-message.h
+│   │   │   ├── ihr-message.h
+│   │   │   ├── liteserver.h
+│   │   │   ├── message-queue.h
+│   │   │   ├── proof.h
+│   │   │   ├── shard-block.h
+│   │   │   ├── shard.h
+│   │   │   ├── signature-set.h
+│   │   │   ├── validator-full-id.h
+│   │   │   ├── validator-manager.h
+│   │   │   └── validator-set.h
+│   │   ├── invariants.hpp
+│   │   ├── manager-disk.cpp
+│   │   ├── manager-disk.h
+│   │   ├── manager-disk.hpp
+│   │   ├── manager-hardfork.cpp
+│   │   ├── manager-hardfork.h
+│   │   ├── manager-hardfork.hpp
+│   │   ├── manager-init.cpp
+│   │   ├── manager-init.h
+│   │   ├── manager-init.hpp
+│   │   ├── manager.cpp
+│   │   ├── manager.h
+│   │   ├── manager.hpp
+│   │   ├── net
+│   │   │   ├── download-archive-slice.cpp
+│   │   │   ├── download-archive-slice.hpp
+│   │   │   ├── download-block-new.cpp
+│   │   │   ├── download-block-new.hpp
+│   │   │   ├── download-block.cpp
+│   │   │   ├── download-block.hpp
+│   │   │   ├── download-next-block.cpp
+│   │   │   ├── download-next-block.hpp
+│   │   │   ├── download-proof.cpp
+│   │   │   ├── download-proof.hpp
+│   │   │   ├── download-state.cpp
+│   │   │   ├── download-state.hpp
+│   │   │   ├── get-next-key-blocks.cpp
+│   │   │   └── get-next-key-blocks.hpp
+│   │   ├── shard-client.cpp
+│   │   ├── shard-client.hpp
+│   │   ├── state-serializer.cpp
+│   │   ├── state-serializer.hpp
+│   │   ├── stats-merger.h
+│   │   ├── token-manager.cpp
+│   │   ├── token-manager.h
+│   │   ├── validate-broadcast.cpp
+│   │   ├── validate-broadcast.hpp
+│   │   ├── validator-full-id.cpp
+│   │   ├── validator-group.cpp
+│   │   ├── validator-group.hpp
+│   │   ├── validator-options.cpp
+│   │   ├── validator-options.hpp
+│   │   └── validator.h
+│   ├── validator-engine
+│   │   ├── CMakeLists.txt
+│   │   ├── validator-engine.cpp
+│   │   └── validator-engine.hpp
+│   ├── validator-engine-console
+│   │   ├── CMakeLists.txt
+│   │   ├── validator-engine-console-query.cpp
+│   │   ├── validator-engine-console-query.h
+│   │   ├── validator-engine-console.cpp
+│   │   └── validator-engine-console.h
+│   └── validator-session
+│       ├── CMakeLists.txt
+│       ├── persistent-vector.cpp
+│       ├── persistent-vector.h
+│       ├── validator-session-description.cpp
+│       ├── validator-session-description.h
+│       ├── validator-session-description.hpp
+│       ├── validator-session-round-attempt-state.cpp
+│       ├── validator-session-round-attempt-state.h
+│       ├── validator-session-state.cpp
+│       ├── validator-session-state.h
+│       ├── validator-session-types.h
+│       ├── validator-session.cpp
+│       ├── validator-session.h
+│       └── validator-session.hpp
+├── ton-docs
+│   ├── CONTRIBUTING.md
+│   ├── LICENSE
+│   ├── README.md
+│   ├── babel.config.js
+│   ├── deployment
+│   │   └── Docker
+│   │       ├── Dockerfile
+│   │       ├── Dockerfile.dockerignore
+│   │       └── nginx.conf
+│   ├── docs
+│   │   ├── contribute
+│   │   │   ├── README.md
+│   │   │   ├── archive
+│   │   │   │   └── hacktoberfest-2022
+│   │   │   │       ├── README.mdx
+│   │   │   │       ├── as-contributor.md
+│   │   │   │       └── as-maintainer.md
+│   │   │   ├── contribution-rules.md
+│   │   │   ├── docs
+│   │   │   │   └── guidelines.md
+│   │   │   ├── maintainers.md
+│   │   │   ├── participate.md
+│   │   │   └── tutorials
+│   │   │       ├── guidelines.md
+│   │   │       ├── principles-of-a-good-tutorial.md
+│   │   │       └── sample-tutorial.md
+│   │   ├── develop
+│   │   │   ├── archive
+│   │   │   │   ├── mining.md
+│   │   │   │   └── pow-givers.md
+│   │   │   ├── companies
+│   │   │   │   ├── auditors.mdx
+│   │   │   │   └── outsource.mdx
+│   │   │   ├── dapps
+│   │   │   │   ├── README.mdx
+│   │   │   │   ├── apis
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── adnl.md
+│   │   │   │   │   ├── sdk.mdx
+│   │   │   │   │   └── toncenter.md
+│   │   │   │   ├── asset-processing
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── jetton_contracts.png
+│   │   │   │   │   ├── jettons.md
+│   │   │   │   │   ├── message_layouts.png
+│   │   │   │   │   ├── metadata.md
+│   │   │   │   │   └── nfts.md
+│   │   │   │   ├── cookbook.md
+│   │   │   │   ├── defi
+│   │   │   │   │   ├── coins.md
+│   │   │   │   │   ├── subscriptions.md
+│   │   │   │   │   ├── tokens.md
+│   │   │   │   │   └── ton-payments.md
+│   │   │   │   ├── telegram-apps
+│   │   │   │   │   ├── README.mdx
+│   │   │   │   │   ├── app-examples.mdx
+│   │   │   │   │   ├── grants.mdx
+│   │   │   │   │   ├── monetization.mdx
+│   │   │   │   │   ├── publishing.mdx
+│   │   │   │   │   ├── step-by-step-guide.mdx
+│   │   │   │   │   ├── testing-apps.mdx
+│   │   │   │   │   └── tips-and-tricks.mdx
+│   │   │   │   ├── ton-connect
+│   │   │   │   │   ├── README.mdx
+│   │   │   │   │   ├── best-practices.md
+│   │   │   │   │   ├── business.md
+│   │   │   │   │   ├── comparison.md
+│   │   │   │   │   ├── developers.md
+│   │   │   │   │   ├── integration.md
+│   │   │   │   │   ├── manifest.md
+│   │   │   │   │   ├── message-builders.mdx
+│   │   │   │   │   ├── mobile.mdx
+│   │   │   │   │   ├── overview.mdx
+│   │   │   │   │   ├── protocol
+│   │   │   │   │   │   ├── README.md
+│   │   │   │   │   │   ├── bridge.md
+│   │   │   │   │   │   ├── requests-responses.md
+│   │   │   │   │   │   ├── session.md
+│   │   │   │   │   │   ├── wallet-guidelines.md
+│   │   │   │   │   │   └── workflow.md
+│   │   │   │   │   ├── react.mdx
+│   │   │   │   │   ├── security.md
+│   │   │   │   │   ├── sign.mdx
+│   │   │   │   │   ├── tg-bot-integration-py.md
+│   │   │   │   │   ├── tg-bot-integration.mdx
+│   │   │   │   │   ├── tg-bot-tonapi-nft.md
+│   │   │   │   │   ├── transactions.md
+│   │   │   │   │   ├── wallet.mdx
+│   │   │   │   │   └── web.mdx
+│   │   │   │   └── tutorials
+│   │   │   │       ├── accept-payments-in-a-telegram-bot-2.md
+│   │   │   │       ├── accept-payments-in-a-telegram-bot-js.md
+│   │   │   │       ├── accept-payments-in-a-telegram-bot.md
+│   │   │   │       ├── collection-minting.md
+│   │   │   │       ├── how-to-run-ton-site.md
+│   │   │   │       ├── jetton-minter.md
+│   │   │   │       └── simple-zk-on-ton.md
+│   │   │   ├── data-formats
+│   │   │   │   ├── block-layout.md
+│   │   │   │   ├── cell-boc.mdx
+│   │   │   │   ├── crc32.md
+│   │   │   │   ├── exotic-cells.md
+│   │   │   │   ├── msg-tlb.mdx
+│   │   │   │   ├── proofs.mdx
+│   │   │   │   ├── tl-b-language.mdx
+│   │   │   │   ├── tl-b-types.mdx
+│   │   │   │   ├── tl.md
+│   │   │   │   ├── tlb-ide.md
+│   │   │   │   └── transaction-layout.md
+│   │   │   ├── fift
+│   │   │   │   ├── fift-and-tvm-assembly.md
+│   │   │   │   ├── fift-deep-dive.md
+│   │   │   │   └── overview.mdx
+│   │   │   ├── func
+│   │   │   │   ├── builtins.md
+│   │   │   │   ├── changelog.md
+│   │   │   │   ├── comments.md
+│   │   │   │   ├── compiler_directives.md
+│   │   │   │   ├── cookbook.md
+│   │   │   │   ├── functions.md
+│   │   │   │   ├── global_variables.md
+│   │   │   │   ├── literals_identifiers.md
+│   │   │   │   ├── overview.md
+│   │   │   │   ├── statements.md
+│   │   │   │   ├── stdlib.mdx
+│   │   │   │   └── types.md
+│   │   │   ├── get-started-with-ton.mdx
+│   │   │   ├── howto
+│   │   │   │   ├── blockchain-configs.md
+│   │   │   │   ├── compile-swap.md
+│   │   │   │   ├── compile.md
+│   │   │   │   ├── config-params.md
+│   │   │   │   ├── faq.md
+│   │   │   │   ├── fees-low-level.md
+│   │   │   │   ├── network-configs.md
+│   │   │   │   ├── step-by-step.md
+│   │   │   │   └── subresolvers.md
+│   │   │   ├── network
+│   │   │   │   ├── adnl-tcp.md
+│   │   │   │   ├── adnl-udp.md
+│   │   │   │   ├── dht.md
+│   │   │   │   ├── overlay.md
+│   │   │   │   └── rldp.md
+│   │   │   ├── overview.mdx
+│   │   │   ├── research-and-development
+│   │   │   │   ├── boc.md
+│   │   │   │   └── minter-flow.md
+│   │   │   └── smart-contracts
+│   │   │       ├── README.mdx
+│   │   │       ├── compile
+│   │   │       │   └── README.md
+│   │   │       ├── environment
+│   │   │       │   ├── ide-plugins.md
+│   │   │       │   ├── installation.md
+│   │   │       │   └── testnet.md
+│   │   │       ├── examples.md
+│   │   │       ├── fees.md
+│   │   │       ├── governance.md
+│   │   │       ├── guidelines
+│   │   │       │   ├── accept.md
+│   │   │       │   ├── external-messages.md
+│   │   │       │   ├── get-methods.md
+│   │   │       │   ├── internal-messages.md
+│   │   │       │   ├── message-delivery-guarantees.mdx
+│   │   │       │   ├── non-bouncable-messages.md
+│   │   │       │   ├── processing.md
+│   │   │       │   └── random-number-generation.md
+│   │   │       ├── guidelines.md
+│   │   │       ├── learn
+│   │   │       │   └── deployment.md
+│   │   │       ├── libraries.md
+│   │   │       ├── messages.md
+│   │   │       ├── sdk
+│   │   │       │   ├── javascript.md
+│   │   │       │   ├── toncli.md
+│   │   │       │   └── tonstarter.md
+│   │   │       ├── security
+│   │   │       │   ├── README.md
+│   │   │       │   ├── random.md
+│   │   │       │   └── ton-hack-challenge-1.md
+│   │   │       ├── testing
+│   │   │       │   ├── overview.mdx
+│   │   │       │   ├── toncli.md
+│   │   │       │   ├── tonstarter.md
+│   │   │       │   └── writing-test-examples.mdx
+│   │   │       ├── tree.txt
+│   │   │       └── tutorials
+│   │   │           ├── multisig-js.md
+│   │   │           ├── multisig.md
+│   │   │           └── wallet.md
+│   │   ├── learn
+│   │   │   ├── docs.md
+│   │   │   ├── glossary.md
+│   │   │   ├── introduction.mdx
+│   │   │   ├── networking
+│   │   │   │   ├── adnl.md
+│   │   │   │   ├── low-level-adnl.md
+│   │   │   │   ├── overlay-subnetworks.md
+│   │   │   │   ├── overview.md
+│   │   │   │   ├── rldp.md
+│   │   │   │   └── ton-dht.md
+│   │   │   ├── overviews
+│   │   │   │   ├── addresses.md
+│   │   │   │   ├── cells.md
+│   │   │   │   └── ton-blockchain.md
+│   │   │   └── tvm-instructions
+│   │   │       ├── generate_md.py
+│   │   │       ├── instructions.csv
+│   │   │       ├── instructions.mdx
+│   │   │       ├── tvm-exit-codes.md
+│   │   │       ├── tvm-initialization.md
+│   │   │       ├── tvm-overview.md
+│   │   │       └── tvm-upgrade-2023-07.md
+│   │   └── participate
+│   │       ├── README.md
+│   │       ├── crosschain
+│   │       │   ├── bridge-addresses.md
+│   │       │   └── overview.md
+│   │       ├── explorers.mdx
+│   │       ├── network-maintenance
+│   │       │   ├── nominators.md
+│   │       │   ├── persistent-states.md
+│   │       │   └── staking-incentives.md
+│   │       ├── nft.md
+│   │       ├── nodes
+│   │       │   ├── collators.md
+│   │       │   ├── full-node.mdx
+│   │       │   ├── lite-client.md
+│   │       │   ├── node-maintenance-and-security.md
+│   │       │   ├── node-types.md
+│   │       │   └── validator.mdx
+│   │       ├── run-nodes
+│   │       │   ├── archive-node.md
+│   │       │   ├── full-node.mdx
+│   │       │   ├── liteserver.mdx
+│   │       │   └── local-ton.md
+│   │       ├── ton-storage
+│   │       │   ├── storage-daemon.md
+│   │       │   ├── storage-faq.md
+│   │       │   └── storage-provider.md
+│   │       ├── wallets
+│   │       │   ├── apps.mdx
+│   │       │   └── contracts.md
+│   │       └── web3
+│   │           ├── dns.md
+│   │           ├── how-to-open-any-ton-site.md
+│   │           ├── overview.mdx
+│   │           ├── setting-proxy.md
+│   │           ├── site-management.md
+│   │           └── sites-and-proxy.md
+│   ├── docusaurus.config.js
+│   ├── i18n
+│   │   ├── ko
+│   │   │   ├── code.json
+│   │   │   ├── docusaurus-plugin-content-docs
+│   │   │   │   └── current.json
+│   │   │   └── docusaurus-plugin-content-pages
+│   │   │       ├── index
+│   │   │       │   ├── features.js
+│   │   │       │   └── index.module.css
+│   │   │       └── index.tsx
+│   │   └── zh-Hant
+│   │       └── docusaurus-plugin-content-docs
+│   │           └── current
+│   │               └── learn
+│   │                   └── introduction.mdx
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── prism-theme.js
+│   ├── sidebars.js
+│   ├── src
+│   │   ├── assets
+│   │   │   └── icons
+│   │   │       ├── coinmarketcap.svg
+│   │   │       ├── github.svg
+│   │   │       ├── index.ts
+│   │   │       ├── linked_in.svg
+│   │   │       ├── logo.svg
+│   │   │       ├── logo_small.svg
+│   │   │       ├── mail.svg
+│   │   │       ├── telegram_circle.svg
+│   │   │       └── twitter.svg
+│   │   ├── components
+│   │   │   ├── SearchField
+│   │   │   │   ├── SearchField.module.css
+│   │   │   │   └── index.tsx
+│   │   │   ├── button.tsx
+│   │   │   ├── conceptImage.tsx
+│   │   │   ├── contentBlock.tsx
+│   │   │   └── player.tsx
+│   │   ├── css
+│   │   │   ├── bootstrap-only-grid.css
+│   │   │   └── custom.css
+│   │   ├── data
+│   │   │   ├── features.js
+│   │   │   └── opcodes
+│   │   │       ├── index.ts
+│   │   │       └── opcodes.json
+│   │   ├── pages
+│   │   │   ├── hacktonberfest.tsx
+│   │   │   ├── index.module.css
+│   │   │   └── index.tsx
+│   │   └── theme
+│   │       ├── Footer
+│   │       │   ├── Footer.scss
+│   │       │   ├── GridSystem
+│   │       │   │   ├── NewCol
+│   │       │   │   │   ├── NewCol.scss
+│   │       │   │   │   └── index.tsx
+│   │       │   │   ├── NewRow
+│   │       │   │   │   ├── NewRow.scss
+│   │       │   │   │   └── index.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── Logo
+│   │       │   │   ├── Logo.scss
+│   │       │   │   └── index.tsx
+│   │       │   ├── NetworkIcon
+│   │       │   │   └── index.tsx
+│   │       │   ├── Separator
+│   │       │   │   ├── Separator.scss
+│   │       │   │   └── index.tsx
+│   │       │   ├── Typography
+│   │       │   │   ├── Caption
+│   │       │   │   │   ├── Caption.scss
+│   │       │   │   │   └── Caption.tsx
+│   │       │   │   ├── Text
+│   │       │   │   │   ├── Text.scss
+│   │       │   │   │   └── Text.tsx
+│   │       │   │   └── index.ts
+│   │       │   ├── config.ts
+│   │       │   ├── index.tsx
+│   │       │   └── styles
+│   │       │       ├── _all.scss
+│   │       │       ├── base
+│   │       │       │   ├── _breakpoints.scss
+│   │       │       │   ├── _colors.scss
+│   │       │       │   └── _vars.scss
+│   │       │       └── utils
+│   │       │           ├── _media_queries.scss
+│   │       │           ├── _mixins.scss
+│   │       │           └── _typography.scss
+│   │       ├── prism
+│   │       │   ├── prism-fift.js
+│   │       │   ├── prism-func.js
+│   │       │   ├── prism-tact.js
+│   │       │   └── prism-tlb.js
+│   │       └── prism-include-languages.js
+│   ├── static
+│   │   ├── catchain.pdf
+│   │   ├── fiftbase.pdf
+│   │   ├── files
+│   │   │   ├── HackTonB.mp4
+│   │   │   ├── nft-sm.mp4
+│   │   │   ├── onboarding-nft.mp4
+│   │   │   ├── onboarding.mp4
+│   │   │   ├── setup_validator.mp4
+│   │   │   ├── tg-payments.mp4
+│   │   │   └── twa.mp4
+│   │   ├── img
+│   │   │   ├── arrow.svg
+│   │   │   ├── banner-bg.svg
+│   │   │   ├── blueprint
+│   │   │   │   └── logo.svg
+│   │   │   ├── docs
+│   │   │   │   ├── Jetton
+│   │   │   │   ├── OpenMask.png
+│   │   │   │   ├── Sub-domains_ton.png
+│   │   │   │   ├── autorization.mp4
+│   │   │   │   ├── blockchain-configs
+│   │   │   │   │   ├── config15-mainnet.png
+│   │   │   │   │   └── config15-testnet.png
+│   │   │   │   ├── dag.png
+│   │   │   │   ├── data-formats
+│   │   │   │   │   ├── structure shceme 6.png
+│   │   │   │   │   ├── tl-b-docs-1-dark.png
+│   │   │   │   │   ├── tl-b-docs-1.png
+│   │   │   │   │   ├── tl-b-docs-10-dark.png
+│   │   │   │   │   ├── tl-b-docs-10.png
+│   │   │   │   │   ├── tl-b-docs-2-dark.png
+│   │   │   │   │   ├── tl-b-docs-2.png
+│   │   │   │   │   ├── tl-b-docs-3-dark.png
+│   │   │   │   │   ├── tl-b-docs-3.png
+│   │   │   │   │   ├── tl-b-docs-4-dark.png
+│   │   │   │   │   ├── tl-b-docs-4.png
+│   │   │   │   │   ├── tl-b-docs-5-dark.png
+│   │   │   │   │   ├── tl-b-docs-5.png
+│   │   │   │   │   ├── tl-b-docs-6-dark.png
+│   │   │   │   │   ├── tl-b-docs-6.png
+│   │   │   │   │   ├── tl-b-docs-7-dark.png
+│   │   │   │   │   ├── tl-b-docs-7.png
+│   │   │   │   │   ├── tl-b-docs-8-dark.png
+│   │   │   │   │   ├── tl-b-docs-8.png
+│   │   │   │   │   ├── tl-b-docs-9-dark.png
+│   │   │   │   │   └── tl-b-docs-9.png
+│   │   │   │   ├── foundation_ton.png
+│   │   │   │   ├── hacktoberfest.webp
+│   │   │   │   ├── how-to-wallet
+│   │   │   │   │   └── wallet_1.png
+│   │   │   │   ├── hyperlinks.mp4
+│   │   │   │   ├── in_a_browser.jpg
+│   │   │   │   ├── main_pic.png
+│   │   │   │   ├── message-delivery
+│   │   │   │   │   ├── message_delivery_1.svg
+│   │   │   │   │   ├── message_delivery_2.svg
+│   │   │   │   │   ├── message_delivery_3.svg
+│   │   │   │   │   ├── message_delivery_4.svg
+│   │   │   │   │   ├── message_delivery_5.svg
+│   │   │   │   │   ├── message_delivery_6.svg
+│   │   │   │   │   └── message_delivery_7.svg
+│   │   │   │   ├── msg-delivery-1.png
+│   │   │   │   ├── msg-delivery-2.png
+│   │   │   │   ├── msg-delivery-3.png
+│   │   │   │   ├── msg-delivery-4.png
+│   │   │   │   ├── msg-delivery-5.png
+│   │   │   │   ├── msg-delivery-6.png
+│   │   │   │   ├── mylocalton.jpeg
+│   │   │   │   ├── sync-async.png
+│   │   │   │   ├── tact-abi-example.png
+│   │   │   │   ├── tact-abi.png
+│   │   │   │   ├── telegram-apps
+│   │   │   │   │   ├── closing-behaviour.svg
+│   │   │   │   │   ├── eruda-1.png
+│   │   │   │   │   ├── eruda-2.png
+│   │   │   │   │   ├── eruda-3.png
+│   │   │   │   │   ├── modern-1.png
+│   │   │   │   │   ├── modern-2.png
+│   │   │   │   │   ├── publish-tg-1.jpeg
+│   │   │   │   │   └── tapps.png
+│   │   │   │   ├── tlb.drawio.svg
+│   │   │   │   ├── ton-connect
+│   │   │   │   │   ├── ton-connect-2_1.png
+│   │   │   │   │   ├── ton-connect-overview.png
+│   │   │   │   │   ├── ton-connect.png
+│   │   │   │   │   ├── ton-connect_1-dark.svg
+│   │   │   │   │   ├── ton-connect_1.svg
+│   │   │   │   │   ├── ton_proof_scheme-dark.svg
+│   │   │   │   │   └── ton_proof_scheme.svg
+│   │   │   │   ├── ton-payments.jpeg
+│   │   │   │   ├── ton_sites.png
+│   │   │   │   ├── ton_www.mp4
+│   │   │   │   ├── wallet-apps
+│   │   │   │   │   ├── CryptoBot.png
+│   │   │   │   │   ├── MyTonWallet.png
+│   │   │   │   │   ├── OpenMask.png
+│   │   │   │   │   ├── TonWallet.png
+│   │   │   │   │   ├── ToncoinWallet-testnet.png
+│   │   │   │   │   ├── Tonhub.png
+│   │   │   │   │   ├── Tonkeeper-testnet.png
+│   │   │   │   │   ├── Tonkeeper.png
+│   │   │   │   │   ├── Wallet.png
+│   │   │   │   │   └── tonrocketbot.png
+│   │   │   │   ├── wallets.mp4
+│   │   │   │   └── writing-test-examples
+│   │   │   │       ├── fireworks_trace_tonviewer.png
+│   │   │   │       ├── test-examples-schemes.svg
+│   │   │   │       ├── test-examples-schemes_id0.svg
+│   │   │   │       ├── test-examples-schemes_id1.svg
+│   │   │   │       ├── test-examples-schemes_id2.svg
+│   │   │   │       ├── test-examples-schemes_id3.svg
+│   │   │   │       ├── test-examples-schemes_id4.svg
+│   │   │   │       ├── test-examples-schemes_id5.svg
+│   │   │   │       ├── test-examples-schemes_id6.svg
+│   │   │   │       ├── test-examples-schemes_id7.svg
+│   │   │   │       └── test-examples-schemes_id8.svg
+│   │   │   ├── explorers-in-ton
+│   │   │   │   ├── eit-dton-info.png
+│   │   │   │   ├── eit-dton-txn.png
+│   │   │   │   ├── eit-tonnftexplorer-info.png
+│   │   │   │   ├── eit-tonnftexplorer-nftdata.png
+│   │   │   │   ├── eit-tonscan-info.png
+│   │   │   │   ├── eit-tonscan-txn.png
+│   │   │   │   ├── eit-tonviewer-info.png
+│   │   │   │   ├── eit-tonviewer-txn.png
+│   │   │   │   ├── eit-tonwhales-info.png
+│   │   │   │   └── eit-tonwhales-txn.png
+│   │   │   ├── favicon.ico
+│   │   │   ├── favicon32x32.png
+│   │   │   ├── mainPageCards
+│   │   │   │   ├── developer-dark.svg
+│   │   │   │   ├── developer-light.svg
+│   │   │   │   ├── participate-dark.svg
+│   │   │   │   ├── participate-light.svg
+│   │   │   │   ├── what_is_ton-dark.svg
+│   │   │   │   └── what_is_ton-light.svg
+│   │   │   ├── readme
+│   │   │   │   ├── about.png
+│   │   │   │   ├── check.png
+│   │   │   │   ├── contribute.png
+│   │   │   │   └── how.png
+│   │   │   ├── snippet.png
+│   │   │   ├── ton_logo_dark_background.svg
+│   │   │   ├── ton_logo_light_background.svg
+│   │   │   ├── ton_symbol.svg
+│   │   │   ├── ton_symbol_old-dark.svg
+│   │   │   ├── ton_symbol_old-light.svg
+│   │   │   └── tutorials
+│   │   │       ├── apiatb-bot.png
+│   │   │       ├── bot1.png
+│   │   │       ├── jetton
+│   │   │       │   ├── jetton-balance-token.PNG
+│   │   │       │   ├── jetton-burn-tokens.png
+│   │   │       │   ├── jetton-connect-wallet.png
+│   │   │       │   ├── jetton-main-page.png
+│   │   │       │   ├── jetton-receive-tokens.png
+│   │   │       │   ├── jetton-send-how.PNG
+│   │   │       │   ├── jetton-send-tokens.png
+│   │   │       │   ├── jetton-send-tutorial.png
+│   │   │       │   ├── jetton-send-what.PNG
+│   │   │       │   ├── jetton-token-logo.png
+│   │   │       │   └── jetton-wallet-address.png
+│   │   │       ├── js-bot-preview.jpg
+│   │   │       ├── nft
+│   │   │       │   ├── collection-metadata.png
+│   │   │       │   ├── collection.png
+│   │   │       │   ├── ducks.zip
+│   │   │       │   ├── eth-collection.png
+│   │   │       │   ├── item-metadata.png
+│   │   │       │   ├── nft-sale.png
+│   │   │       │   └── ton-collection.png
+│   │   │       ├── onboarding
+│   │   │       │   ├── 1-dark.png
+│   │   │       │   ├── 1.png
+│   │   │       │   ├── 2-dark.png
+│   │   │       │   ├── 2.png
+│   │   │       │   ├── 3-dark.png
+│   │   │       │   ├── 3.png
+│   │   │       │   ├── 4-dark.png
+│   │   │       │   ├── 4.png
+│   │   │       │   ├── 5-dark.png
+│   │   │       │   ├── 5.png
+│   │   │       │   ├── 6-dark.png
+│   │   │       │   ├── 6.png
+│   │   │       │   ├── 7-dark.png
+│   │   │       │   ├── 7.png
+│   │   │       │   └── 8.svg
+│   │   │       └── tonkeeper
+│   │   │           └── test-mode.webp
+│   │   ├── schemes-visio
+│   │   │   ├── message_processing.vsdx
+│   │   │   ├── message_processing_prototype.png
+│   │   │   ├── readme.md
+│   │   │   ├── test-examples-schemes.vsdx
+│   │   │   ├── tlb-schemes — dark.vsdx
+│   │   │   ├── tlb-schemes.vsdx
+│   │   │   ├── ton-connect — dark.vsdx
+│   │   │   ├── ton-connect.vsdx
+│   │   │   ├── ton_proof_scheme.vsdx
+│   │   │   ├── ton_proof_scheme_dark.vsdx
+│   │   │   └── ~$$ton-connect — dark.~vsdx
+│   │   ├── tblkch.pdf
+│   │   ├── ton-binaries
+│   │   │   └── windows
+│   │   │       ├── Win64OpenSSL_Light-1_1_1q.msi
+│   │   │       └── fiftlib.zip
+│   │   ├── ton-trustless-bridge_tvm-and-zk_v1.1_23-05-15.pdf
+│   │   ├── ton.pdf
+│   │   ├── trustless-interaction-with-ton_v1.1_23-05-15.pdf
+│   │   └── tvm.pdf
+│   └── tsconfig.json
+├── tree.md
+└── tree.txt
+
+294 directories, 2491 files
